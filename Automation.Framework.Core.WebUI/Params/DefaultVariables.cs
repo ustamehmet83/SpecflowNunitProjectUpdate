@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Automation.Framework.Core.WebUI.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Automation.Framework.Core.WebUI.Params
 {
-    public class DefaultVariables
+    public class DefaultVariables : IDefaultVariables
     {
 
 
@@ -23,6 +24,37 @@ namespace Automation.Framework.Core.WebUI.Params
         {
             get {
                return  getReport + "\\log.txt";
+            }
+        }
+
+        public string getFrameworkSettingsjson
+        {
+            get {
+
+                return System.IO.Directory
+                    .GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName + "\\Resources\\frameworkSettings.json";
+
+
+            }
+        }
+
+        public string gridhuburl
+        {
+
+            get {
+
+                return "https://localhost:4444/wd/hub";
+            }
+        
+        }
+
+        public string dataSetLocation
+        {
+
+            get
+            {
+                return System.IO.Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory + "../../../").FullName + "\\DataSetLocation";
+            
             }
         }
     }

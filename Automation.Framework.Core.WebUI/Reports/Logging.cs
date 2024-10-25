@@ -1,4 +1,5 @@
-﻿using Automation.Framework.Core.WebUI.Params;
+﻿using Automation.Framework.Core.WebUI.Abstractions;
+using Automation.Framework.Core.WebUI.Params;
 using Serilog;
 using Serilog.Core;
 using System;
@@ -9,16 +10,18 @@ using System.Threading.Tasks;
 
 namespace Automation.Framework.Core.WebUI.Reports
 {
-    public class Logging
+    public class Logging:ILogging
     {
 
         LoggingLevelSwitch _loggingLevelSwitch;
-        public Logging()
+        IDefaultVariables _idefaultVariables;
+        public Logging(IDefaultVariables idefaultVariables)
         {
-            DefaultVariables defaultVariables = new DefaultVariables();
+            //DefaultVariables defaultVariables = new DefaultVariables();
+            _idefaultVariables= idefaultVariables;
             _loggingLevelSwitch = new LoggingLevelSwitch(Serilog.Events.LogEventLevel.Debug);
             Log.Logger = new LoggerConfiguration().MinimumLevel.ControlledBy(_loggingLevelSwitch)
-                    .WriteTo.File(defaultVariables.getLog, outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
+                    .WriteTo.File(_idefaultVariables.getLog, outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
                     .Enrich.WithThreadName().CreateLogger();
         }
 

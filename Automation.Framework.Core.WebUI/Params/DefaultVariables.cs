@@ -27,6 +27,14 @@ namespace Automation.Framework.Core.WebUI.Params
             }
         }
 
+        public string getExtentReport
+        {
+            get
+            {
+                return getReport + "\\index.html";
+            }
+        }
+
         public string getFrameworkSettingsjson
         {
             get {

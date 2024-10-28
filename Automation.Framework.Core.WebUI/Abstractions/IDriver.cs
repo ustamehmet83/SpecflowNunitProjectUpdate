@@ -24,5 +24,7 @@ namespace Automation.Framework.Core.WebUI.Abstractions
         void ScrollWithPixel();
         void ScrollByheight();
         void ScrollIntoView(IAtWebElement iatWebElement);
+
+        string GetScreenShot();
     }
 }

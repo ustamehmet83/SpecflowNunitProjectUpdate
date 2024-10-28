@@ -21,6 +21,8 @@ namespace Automation.DemoUI.Hooks
         //IGlobalProperties iglobalProperties;
         //IChromeWebDriver _ichromeWebDriver;
         //IFirefoxWebDriver _ifirefoxWebDriver;
+        //IExtentFeatureReport _iextentFeatureReport;
+        ScenarioContext _scenarioContext;
         IDriver _idrivers;
         //public SpecflowBase(IChromeWebDriver _chromeDriver, IFirefoxWebDriver ifirefoxWebDriver)
         //{
@@ -30,7 +32,7 @@ namespace Automation.DemoUI.Hooks
         //}
         public SpecflowBase(IDriver idrivers)
         {
-            _idrivers= idrivers;
+            _idrivers = idrivers;
         }
 
         //[BeforeScenario(Order = 2)]
@@ -38,9 +40,43 @@ namespace Automation.DemoUI.Hooks
         //{
         //    _idrivers = iobjectContainer.Resolve<IDriver>();
         //}
+
+        [BeforeScenario(Order = 2)]
+        public void BeforeScenario(ScenarioContext scenarioContext, FeatureContext fs)
+        {
+            _scenarioContext = scenarioContext;
+            IExtentReport extentReport = (IExtentReport)fs["iextentreport"];
+            extentReport.CreateScenario(scenarioContext.ScenarioInfo.Title);
+        }
+
+        [AfterStep]
+        public void AfterSteps(ScenarioContext sc, FeatureContext fs)
+        {
+            IExtentReport extentReport = (IExtentReport)fs["iextentreport"];
+            IGlobalProperties iglobalProperties=SpecflowRunner._iserviceProvider.GetRequiredService<IGlobalProperties>();
+            string base64 = null; 
+            if (sc.TestError != null)
+            {
+                base64 = _idrivers.GetScreenShot();
+                extentReport.Fail(sc.StepContext.StepInfo.Text, base64);
+            }
+            else
+            {
+
+                if (iglobalProperties.stepscreenshot)
+                {
+                    base64 = _idrivers.GetScreenShot();
+                }
+                extentReport.Pass(sc.StepContext.StepInfo.Text,base64);
+            }
+
+        }
+
         [AfterScenario]
         public void AfterScenario()
         {
+            IExtentFeatureReport extentFeatureReport = SpecflowRunner._iserviceProvider.GetRequiredService<IExtentFeatureReport>();
+            extentFeatureReport.FlushExtent();
             _idrivers.CloseBrowser();
         }
     }

@@ -140,5 +140,10 @@ namespace Automation.Framework.Core.WebUI.DriverContext
             js.ExecuteScript("agruments[0].scrollIntoView", iwebElement);
         }
 
+        public string GetScreenShot() 
+        { 
+        return ((ITakesScreenshot)GetWebDriver()).GetScreenshot().AsBase64EncodedString;
+        }
+
     }
 }

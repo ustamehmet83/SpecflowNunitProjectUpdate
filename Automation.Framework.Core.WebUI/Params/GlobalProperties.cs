@@ -14,6 +14,7 @@ namespace Automation.Framework.Core.WebUI.Params
     {
         IDefaultVariables _idefaultVariables;
         ILogging _ilogging;
+        IExtentFeatureReport _iextentFeatureReport;
         public string browsertype { get; set; }
         public string gridhuburl { get; set; }
         public bool stepscreenshot { get; set; }
@@ -22,11 +23,13 @@ namespace Automation.Framework.Core.WebUI.Params
         public string loglevel { get; set; }
         public string datasetlocation { get; set; }
         public string downloadedlocation { get; set; }
-        public GlobalProperties(IDefaultVariables idefaultVariables, ILogging ilogging)
+        public GlobalProperties(IDefaultVariables idefaultVariables, ILogging ilogging, IExtentFeatureReport iextentFeatureReport)
         {
             _idefaultVariables = idefaultVariables;
             _ilogging = ilogging;
+            _iextentFeatureReport = iextentFeatureReport;
             Configuration();
+
         }
 
         public void Configuration()
@@ -51,7 +54,7 @@ namespace Automation.Framework.Core.WebUI.Params
             loglevel = builder["LogLevel"];
             datasetlocation = string.IsNullOrEmpty(builder["DataSetLocation"]) ? _idefaultVariables.dataSetLocation : builder["DataSetLocation"];
             downloadedlocation = string.IsNullOrEmpty(builder["DataSetLocation"]) ? _idefaultVariables.dataSetLocation : builder["DownloadedLocation"];
-
+            _iextentFeatureReport.InitiliazeExtentReport();
             _ilogging.LogLevel(loglevel);
 
             _ilogging.Debug("********************************************************************************");

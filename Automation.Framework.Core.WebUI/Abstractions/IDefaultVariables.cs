@@ -19,6 +19,8 @@ namespace Automation.Framework.Core.WebUI.Abstractions
 
         string getApplicationConfigjson { get; }
 
+        string getExtentReport { get; }
+
 
     }
 }

@@ -1,4 +1,6 @@
-﻿using Automation.Framework.Core.WebUI.DIContainer;
+﻿using Automation.Framework.Core.WebUI.Abstractions;
+using Automation.Framework.Core.WebUI.DIContainer;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +19,15 @@ namespace Automation.Framework.Core.WebUI.Runner
         public static void BeforeTestRun()
         {
             _iserviceProvider = CoreContainerConfig.ConfigureServices();
+            _iserviceProvider.GetRequiredService<IGlobalProperties>();
+        }
+
+        [BeforeFeature]
+        public static void BeforeFeature(FeatureContext fs)
+        {
+            IExtentReport iextentReport=_iserviceProvider.GetRequiredService<IExtentReport>();
+            iextentReport.CreateFeature(fs.FeatureInfo.Title);
+            fs["iextentreport"] = iextentReport;
         }
     }
 }

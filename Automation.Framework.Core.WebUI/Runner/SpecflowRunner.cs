@@ -12,12 +12,11 @@ namespace Automation.Framework.Core.WebUI.Runner
     [Binding]
     public class SpecflowRunner
     {
-
-       static  IServiceProvider _iserviceProvider;
+        public static IServiceProvider _iserviceProvider;
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
-            _iserviceProvider = ContainerConfig.ConfigureServices();      
+            _iserviceProvider = CoreContainerConfig.ConfigureServices();
         }
     }
 }

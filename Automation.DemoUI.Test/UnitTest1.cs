@@ -13,7 +13,7 @@ namespace Automation.DemoUI.Test
         {
             //GlobalProperties globalProperties = new GlobalProperties();
             //Logging logging=new Logging();
-            IServiceProvider iserviceProvider = ContainerConfig.ConfigureServices();
+            IServiceProvider iserviceProvider = CoreContainerConfig.ConfigureServices();
             IGlobalProperties globalProperties = iserviceProvider.GetRequiredService<IGlobalProperties>();
             globalProperties.Configuration();
             ILogging logging=iserviceProvider.GetRequiredService<ILogging>();

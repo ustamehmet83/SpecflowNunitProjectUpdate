@@ -1,4 +1,8 @@
 ﻿using Automation.DemoUI.Pages;
+using Automation.DemoUI.WebAbstraction;
+using Automation.Framework.Core.WebUI.Abstractions;
+using BoDi;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,16 +15,20 @@ namespace Automation.DemoUI.Steps
     [Binding]
     public class LoginSteps
     {
-        LoginPage loginPage;
-        public LoginSteps()
+        ILoginPage _iloginPage;
+        IAtConfiguration _iatConfiguration;
+        public LoginSteps(IAtConfiguration iatConfiguration,IDriver idrivers, IObjectContainer objectContainer,ILoginPage iloginpage)
         {
-            loginPage = new LoginPage();
+            _iatConfiguration = iatConfiguration;
+            _iloginPage = iloginpage;
+            
+            
         }
 
         [Given(@"login with valid credentials")]
         public void GivenLoginWithValidCredentials()
         {
-            loginPage.LoginWithValidCredentials("standard_user", "secret_sauce");
+            _iloginPage.LoginWithValidCredentials(_iatConfiguration.GetConfiguration("username"), _iatConfiguration.GetConfiguration("password"));
         }
 
 
@@ -28,7 +36,7 @@ namespace Automation.DemoUI.Steps
         [Given(@"login with invalid credentials")]
         public void GivenLoginWithİnvalidCredentials()
         {
-            loginPage.LoginWithValidCredentials("standard", "sceret_sauce");
+            _iloginPage.LoginWithInvalidCredentials("", "");
         }
 
 

@@ -6,33 +6,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebDriverManager.DriverConfigs.Impl;
+using Automation.DemoUI.WebAbstraction;
+using Automation.Framework.Core.WebUI.Abstractions;
+using Automation.DemoUI.Configuration;
+using Automation.Framework.Core.WebUI.Base;
+using BoDi;
+using Automation.Framework.Core.WebUI.DriverContext;
 
 namespace Automation.DemoUI.Pages
 {
-    public class LoginPage
+    public class LoginPage:TestBase,ILoginPage
     {
 
         IWebDriver _iwebDriver;
-        IWebElement UserName => _iwebDriver.FindElement(By.XPath("//input[@id='user-name']"));
-        IWebElement Password => _iwebDriver.FindElement(By.XPath("//input[@id='password']"));
-        IWebElement Login => _iwebDriver.FindElement(By.XPath("//input[@id='login-button']"));
-        public LoginPage()
+        IAtConfiguration _iatConfiguration;
+        IDriver _idrivers;
+
+        IAtBy byUsername => GetBy(LocatorType.XPath, "//input[@id='user-name']");      
+        IAtWebElement UserName => _idrivers.FindElement(byUsername);
+        IAtBy byPassword=> GetBy(LocatorType.XPath, "//input[@id='password']");
+        IAtWebElement Password => _idrivers.FindElement(byPassword);      
+        IAtBy byLogin => GetBy(LocatorType.XPath, "//input[@id='login-button']");
+        IAtWebElement Login => _idrivers.FindElement(byLogin);
+        public LoginPage(IAtConfiguration iatConfiguration, IDriver idrivers,IObjectContainer objectContainer):base(objectContainer)
         {
-            new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
-            _iwebDriver = new ChromeDriver();
-            _iwebDriver.Manage().Window.Maximize();
+            _iatConfiguration = iatConfiguration;
+            _iwebDriver = idrivers.GetWebDriver();
+            _idrivers = idrivers;
+
         }
         public void LoginWithValidCredentials(string username, string password)
         {
-            _iwebDriver.Navigate().GoToUrl("https://www.saucedemo.com");
+            string url = _iatConfiguration.GetConfiguration("url");        
+            _idrivers.NavigateTo(url);
             Thread.Sleep(3000);
-
             UserName.SendKeys(username);
             Password.SendKeys(password);
             Login.Click();
         }
 
-     
+        public void LoginWithInvalidCredentials(string username, string password)
+        {
+            string url = _iatConfiguration.GetConfiguration("url");
+            _idrivers.NavigateTo(url);
+            Thread.Sleep(3000);
+            UserName.SendKeys(username);
+            Password.SendKeys(password);
+            Login.Click();
+        }
+
+
 
 
 

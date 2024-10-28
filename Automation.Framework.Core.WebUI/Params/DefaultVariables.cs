@@ -33,6 +33,17 @@ namespace Automation.Framework.Core.WebUI.Params
 
                 return System.IO.Directory
                     .GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName + "\\Resources\\frameworkSettings.json";
+ 
+            }
+        }
+
+        public string getApplicationConfigjson
+        {
+            get
+            {
+
+                return System.IO.Directory
+                    .GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName + "\\Resources\\applicationConfig.json";
 
 
             }

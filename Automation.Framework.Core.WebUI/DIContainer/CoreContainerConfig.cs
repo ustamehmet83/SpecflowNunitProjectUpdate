@@ -1,6 +1,10 @@
 ﻿using Automation.Framework.Core.WebUI.Abstractions;
+using Automation.Framework.Core.WebUI.DriverContext;
 using Automation.Framework.Core.WebUI.Params;
 using Automation.Framework.Core.WebUI.Reports;
+using Automation.Framework.Core.WebUI.Selenium.LocalWebDrivers;
+using Automation.Framework.Core.WebUI.WebElements;
+using BoDi;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -11,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace Automation.Framework.Core.WebUI.DIContainer
 {
-    public class ContainerConfig
+    public class CoreContainerConfig
     {
         public static IServiceProvider ConfigureServices()
         {
@@ -20,6 +24,16 @@ namespace Automation.Framework.Core.WebUI.DIContainer
             services.AddSingleton<ILogging,Logging>();
             services.AddSingleton<IGlobalProperties,GlobalProperties>();
             return services.BuildServiceProvider();
+        }
+
+        public static IObjectContainer SetContainer(IObjectContainer iobjectContainer) 
+        { 
+            iobjectContainer.RegisterTypeAs<ChromeWebDriver, IChromeWebDriver>();
+            iobjectContainer.RegisterTypeAs<FirefoxWebDriver, IFirefoxWebDriver>();
+            iobjectContainer.RegisterTypeAs<Driver, IDriver>();
+            iobjectContainer.RegisterTypeAs<AtBy, IAtBy>();
+            iobjectContainer.RegisterTypeAs<AtWebElement, IAtWebElement>();
+            return iobjectContainer;
         }
 
 

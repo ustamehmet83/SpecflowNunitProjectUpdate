@@ -17,6 +17,8 @@ namespace Automation.Framework.Core.WebUI.Abstractions
 
         string gridhuburl { get; }
 
+        string getApplicationConfigjson { get; }
+
 
     }
 }

@@ -50,7 +50,6 @@ namespace Automation.DemoUi.Pages
             Assert.AreEqual(tableProduct.ToProjection<Product>().Except(table.ToProjection<Product>()).Count(), 0);
         }
 
-
         public void SelectCartItems(IList<string> cartItems)
         {
             CartUnCartItems(cartItems, "Remove");

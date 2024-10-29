@@ -18,7 +18,7 @@ namespace Automation.DemoUI.Pages
     public class LoginPage:TestBase,ILoginPage
     {
 
-        IWebDriver _iwebDriver;
+      
         IAtConfiguration _iatConfiguration;
         IDriver _idrivers;
 
@@ -31,7 +31,6 @@ namespace Automation.DemoUI.Pages
         public LoginPage(IAtConfiguration iatConfiguration, IDriver idrivers,IObjectContainer objectContainer):base(objectContainer)
         {
             _iatConfiguration = iatConfiguration;
-            _iwebDriver = idrivers.GetWebDriver();
             _idrivers = idrivers;
 
         }

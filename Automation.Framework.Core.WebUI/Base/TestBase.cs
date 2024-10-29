@@ -1,5 +1,5 @@
-﻿using Automation.Framework.Core.WebUI.Abstractions;
-using Automation.Framework.Core.WebUI.WebElements;
+﻿
+using Automation.Framework.Core.WebUI.Abstractions;
 using BoDi;
 using OpenQA.Selenium;
 using System;
@@ -13,49 +13,29 @@ namespace Automation.Framework.Core.WebUI.Base
     public class TestBase
     {
         IObjectContainer _iobjectContainer;
-        AtBy _atBy;
-        private IObjectContainer objectContainer;
-
-        public TestBase(IObjectContainer objectContainer) 
+        public TestBase(IObjectContainer objectContainer)
         {
-            _iobjectContainer=objectContainer;
-            _atBy = new AtBy();
+            _iobjectContainer = objectContainer;
         }
 
-        public AtBy GetBy(LocatorType type, string value)
+        public IAtBy GetBy(LocatorType type, string value)
         {
             By by;
-            IAtBy iatBy=_iobjectContainer.Resolve<IAtBy>();
+            IAtBy iatBy = _iobjectContainer.Resolve<IAtBy>();
             switch (type)
             {
-                case LocatorType.XPath:
+                case LocatorType.Xpath:
                     by = By.XPath(value);
-                    break;
-                case LocatorType.Css:
-                    by = By.CssSelector(value);
-                    break;
-                case LocatorType.LinkText:
-                    by = By.LinkText(value);
                     break;
                 case LocatorType.Id:
                     by = By.Id(value);
                     break;
-                case LocatorType.ClassName:
-                    by = By.ClassName(value);
-                    break;
-                case LocatorType.TagName:
-                    by = By.TagName(value);
-                    break;
-                case LocatorType.PartialLinkText:
-                    by = By.PartialLinkText(value);
-                    break;
                 default:
-                    by = By.Name(value);
+                    by = By.XPath(value);
                     break;
             }
-            _atBy.By = by;
-
-            return _atBy;
+            iatBy.By = by;
+            return iatBy;
 
         }
     }

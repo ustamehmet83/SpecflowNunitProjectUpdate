@@ -26,7 +26,9 @@ namespace Automation.Framework.Core.WebUI.WebElements
             _iwebDriver = iwebDriver;
             _iatBy = iatBy;
             _ilogging = SpecflowRunner._iserviceProvider.GetRequiredService<ILogging>();
-        }    
+        }
+
+        int IAtWebElement.NumberOfElement => _iwebDriver.FindElements(_iatBy.By).Count();
 
         public IWebElement GetElement()
         {
@@ -62,7 +64,7 @@ namespace Automation.Framework.Core.WebUI.WebElements
                 }
             }
 
-        }   
+        }
 
         public void SendKeys(string text)
         {

@@ -1,4 +1,6 @@
-﻿using Automation.DemoUI.Configuration;
+﻿using Automation.DemoUi.Pages;
+using Automation.DemoUi.WebAbstraction;
+using Automation.DemoUI.Configuration;
 using Automation.DemoUI.Pages;
 using Automation.DemoUI.WebAbstraction;
 using Automation.Framework.Core.WebUI.DIContainer;
@@ -20,7 +22,8 @@ namespace Automation.DemoUI.Container
         {
             iobjectContainer.RegisterTypeAs<AtConfiguration, IAtConfiguration>();
             iobjectContainer.RegisterTypeAs<LoginPage, ILoginPage>();
-            iobjectContainer=CoreContainerConfig.SetContainer(iobjectContainer);
+            iobjectContainer.RegisterTypeAs<SwagLabPage, ISwagLabPage>();
+            iobjectContainer =CoreContainerConfig.SetContainer(iobjectContainer);
         }   
     }
 }

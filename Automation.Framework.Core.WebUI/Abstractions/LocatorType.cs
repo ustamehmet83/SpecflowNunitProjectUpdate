@@ -16,7 +16,7 @@ namespace Automation.Framework.Core.WebUI.Abstractions
         PartialLinkText,
         LinkText,
         Css,
-        Name
-
+        Name,
+        Xpath
     }
 }

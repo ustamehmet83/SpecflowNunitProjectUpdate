@@ -20,5 +20,6 @@ namespace Automation.Framework.Core.WebUI.Abstractions
         void DoubleClick();
         void ClickWithJs();
         IWebElement GetElement();
+        int NumberOfElement { get; }
     }
 }

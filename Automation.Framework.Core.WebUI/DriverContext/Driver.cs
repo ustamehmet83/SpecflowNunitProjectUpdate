@@ -52,6 +52,10 @@ namespace Automation.Framework.Core.WebUI.DriverContext
             }
         }
 
+        public int FindElementsCount(IAtBy iatBy)
+        {
+            return GetWebDriver().FindElements(iatBy.By).Count;
+        }
         public IAtWebElement FindElement(IAtBy iatBy)
         {
             IAtWebElement iatWebElement = _iobjectContainer.Resolve<IAtWebElement>();
@@ -140,9 +144,9 @@ namespace Automation.Framework.Core.WebUI.DriverContext
             js.ExecuteScript("agruments[0].scrollIntoView", iwebElement);
         }
 
-        public string GetScreenShot() 
-        { 
-        return ((ITakesScreenshot)GetWebDriver()).GetScreenshot().AsBase64EncodedString;
+        public string GetScreenShot()
+        {
+            return ((ITakesScreenshot)GetWebDriver()).GetScreenshot().AsBase64EncodedString;
         }
 
     }

@@ -1,7 +1,6 @@
 ﻿using Automation.DemoUI.WebAbstraction;
 using Automation.Framework.Core.WebUI.Abstractions;
 using Automation.Framework.Core.WebUI.Params;
-using Automation.Framework.Core.WebUI.Runner;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;

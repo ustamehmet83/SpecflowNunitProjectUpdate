@@ -32,7 +32,6 @@ namespace Automation.Framework.Core.WebUI.Params
             _ilogging = ilogging;
             _iextentFeatureReport = iextentFeatureReport;
             Configuration();
-
         }
 
         public void Configuration()

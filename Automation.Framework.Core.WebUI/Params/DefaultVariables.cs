@@ -39,9 +39,8 @@ namespace Automation.Framework.Core.WebUI.Params
         {
             get {
 
-                return System.IO.Directory
-                    .GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName + "\\Resources\\frameworkSettings.json";
- 
+                return Directory
+                    .GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName + "\\Resources\\frameworkSettings.json"; 
             }
         }
 
@@ -50,10 +49,8 @@ namespace Automation.Framework.Core.WebUI.Params
             get
             {
 
-                return System.IO.Directory
+                return Directory
                     .GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName + "\\Resources\\applicationConfig.json";
-
-
             }
         }
 
@@ -72,7 +69,7 @@ namespace Automation.Framework.Core.WebUI.Params
 
             get
             {
-                return System.IO.Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory + "../../../").FullName + "\\DataSetLocation";
+                return Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory + "../../../").FullName + "\\DataSetLocation";
             
             }
         }

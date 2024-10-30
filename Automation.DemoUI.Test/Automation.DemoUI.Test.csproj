@@ -18,8 +18,6 @@
 
   <ItemGroup>
     <Folder Include="DataSet\" />
-    <Folder Include="TestCases\" />
-    <Folder Include="TestCases\" />
     <Folder Include="Result\" />
   </ItemGroup>
 

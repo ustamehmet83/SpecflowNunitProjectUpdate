@@ -2,7 +2,6 @@
 using Automation.Framework.Core.WebUI.Abstractions;
 
 using Automation.Framework.Core.WebUI.CustomExceptions;
-using Automation.Framework.Core.WebUI.Runner;
 using BoDi;
 using Microsoft.Extensions.DependencyInjection;
 using OpenQA.Selenium;

@@ -1,5 +1,4 @@
 ﻿using Automation.Framework.Core.WebUI.Abstractions;
-using Automation.Framework.Core.WebUI.Runner;
 using BoDi;
 using Microsoft.Extensions.DependencyInjection;
 using OpenQA.Selenium;
@@ -35,7 +34,6 @@ namespace Automation.DemoUI.Hooks
             extentReport = _extentReport;
             extentReport.CreateFeature(fs.FeatureInfo.Title);
             fs["iextentreport"] = extentReport;
-            extentReport = (IExtentReport)fs["iextentreport"];
             extentReport.CreateScenario(scenarioContext.ScenarioInfo.Title);
             _iglobalProperties= iglobalProperties;
             _iextentFeatureReport= iextentFeatureReport;

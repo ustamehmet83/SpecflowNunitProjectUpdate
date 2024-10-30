@@ -1,4 +1,6 @@
-﻿using Automation.Framework.Core.WebUI.Abstractions;
+﻿using Automation.DemoUI.Configuration;
+using Automation.DemoUI.WebAbstraction;
+using Automation.Framework.Core.WebUI.Abstractions;
 using Automation.Framework.Core.WebUI.DriverContext;
 using Automation.Framework.Core.WebUI.Params;
 using Automation.Framework.Core.WebUI.Reports;
@@ -12,6 +14,7 @@ using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechTalk.SpecFlow.Configuration;
 
 namespace Automation.Framework.Core.WebUI.DIContainer
 {
@@ -28,15 +31,7 @@ namespace Automation.Framework.Core.WebUI.DIContainer
             return services.BuildServiceProvider();
         }
 
-        public static IObjectContainer SetContainer(IObjectContainer iobjectContainer) 
-        { 
-            iobjectContainer.RegisterTypeAs<ChromeWebDriver, IChromeWebDriver>();
-            iobjectContainer.RegisterTypeAs<FirefoxWebDriver, IFirefoxWebDriver>();
-            iobjectContainer.RegisterTypeAs<Driver, IDriver>();
-            iobjectContainer.RegisterTypeAs<AtBy, IAtBy>();
-            iobjectContainer.RegisterTypeAs<AtWebElement, IAtWebElement>();
-            return iobjectContainer;
-        }
+      
 
 
     }

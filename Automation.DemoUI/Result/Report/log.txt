@@ -1,0 +1,64 @@
+2024-10-30 17:29:15.284 +03:00 [ERR] File does not exists. The configuration file 'Resources\frameworkSettings.json' was not found and is not optional. The expected physical path was 'C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\bin\Debug\net6.0\Resources\frameworkSettings.json'.
+2024-10-30 17:29:27.541 +03:00 [ERR] File does not exists. The configuration file 'Resources\frameworkSettings.json' was not found and is not optional. The expected physical path was 'C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\bin\Debug\net6.0\Resources\frameworkSettings.json'.
+2024-10-30 17:29:39.108 +03:00 [ERR] File does not exists. The configuration file 'Resources\frameworkSettings.json' was not found and is not optional. The expected physical path was 'C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\bin\Debug\net6.0\Resources\frameworkSettings.json'.
+2024-10-30 17:30:00.219 +03:00 [ERR] File does not exists. The configuration file 'Resources\frameworkSettings.json' was not found and is not optional. The expected physical path was 'C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\bin\Debug\net6.0\Resources\frameworkSettings.json'.
+2024-10-30 17:30:35.453 +03:00 [ERR] File does not exists. The configuration file 'Resources\frameworkSettings.json' was not found and is not optional. The expected physical path was 'C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\bin\Debug\net6.0\Resources\frameworkSettings.json'.
+2024-10-30 17:31:33.865 +03:00 [ERR] File does not exists. The configuration file 'Resources\frameworkSettings.json' was not found and is not optional. The expected physical path was 'C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\bin\Debug\net6.0\Resources\frameworkSettings.json'.
+2024-10-30 17:35:14.115 +03:00 [ERR] File does not exists. The configuration file 'Resources\frameworkSettings.json' was not found and is not optional. The expected physical path was 'C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\bin\Debug\net6.0\Resources\frameworkSettings.json'.
+2024-10-30 17:44:44.130 +03:00 [ERR] File does not exists. The configuration file 'Resources\frameworkSettings.json' was not found and is not optional. The expected physical path was 'C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\bin\Debug\net6.0\Resources\frameworkSettings.json'.
+2024-10-30 17:46:56.592 +03:00 [DBG] ********************************************************************************
+2024-10-30 17:46:56.599 +03:00 [INF] ********************************************************************************
+2024-10-30 17:46:56.599 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-10-30 17:46:56.599 +03:00 [INF] ********************************************************************************
+2024-10-30 17:46:56.599 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-10-30 17:46:56.599 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-10-30 17:46:56.599 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-10-30 17:46:56.599 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-10-30 17:46:56.599 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-10-30 17:46:56.599 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-10-30 17:46:56.599 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-10-30 17:46:56.599 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-10-30 17:46:56.599 +03:00 [INF] ********************************************************************************
+2024-10-30 17:46:56.599 +03:00 [INF] ********************************************************************************
+2024-10-30 17:47:16.765 +03:00 [DBG] ********************************************************************************
+2024-10-30 17:47:16.772 +03:00 [INF] ********************************************************************************
+2024-10-30 17:47:16.772 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-10-30 17:47:16.772 +03:00 [INF] ********************************************************************************
+2024-10-30 17:47:16.772 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-10-30 17:47:16.772 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-10-30 17:47:16.772 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-10-30 17:47:16.772 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-10-30 17:47:16.772 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-10-30 17:47:16.772 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-10-30 17:47:16.772 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-10-30 17:47:16.772 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-10-30 17:47:16.772 +03:00 [INF] ********************************************************************************
+2024-10-30 17:47:16.772 +03:00 [INF] ********************************************************************************
+2024-10-30 17:47:36.116 +03:00 [DBG] ********************************************************************************
+2024-10-30 17:47:36.122 +03:00 [INF] ********************************************************************************
+2024-10-30 17:47:36.122 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-10-30 17:47:36.122 +03:00 [INF] ********************************************************************************
+2024-10-30 17:47:36.122 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-10-30 17:47:36.122 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-10-30 17:47:36.122 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-10-30 17:47:36.122 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-10-30 17:47:36.122 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-10-30 17:47:36.122 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-10-30 17:47:36.122 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-10-30 17:47:36.122 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-10-30 17:47:36.122 +03:00 [INF] ********************************************************************************
+2024-10-30 17:47:36.122 +03:00 [INF] ********************************************************************************
+2024-10-30 17:47:53.659 +03:00 [DBG] ********************************************************************************
+2024-10-30 17:47:53.668 +03:00 [INF] ********************************************************************************
+2024-10-30 17:47:53.668 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-10-30 17:47:53.668 +03:00 [INF] ********************************************************************************
+2024-10-30 17:47:53.668 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-10-30 17:47:53.668 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-10-30 17:47:53.668 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-10-30 17:47:53.668 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-10-30 17:47:53.668 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-10-30 17:47:53.668 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-10-30 17:47:53.668 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-10-30 17:47:53.668 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-10-30 17:47:53.668 +03:00 [INF] ********************************************************************************
+2024-10-30 17:47:53.668 +03:00 [INF] ********************************************************************************

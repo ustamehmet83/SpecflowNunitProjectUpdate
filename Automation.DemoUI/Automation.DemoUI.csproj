@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Automation.DemoUI.Test\Automation.DemoUI.Test.csproj" />
     <ProjectReference Include="..\Automation.Framework.Core.WebUI\Automation.Framework.Core.WebUI.csproj" />
   </ItemGroup>
 
@@ -37,6 +38,12 @@
     <Compile Update="TestCases\SwagLabs.feature.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="specflow.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

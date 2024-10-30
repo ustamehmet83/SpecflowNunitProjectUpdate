@@ -19,7 +19,7 @@ namespace Automation.DemoUI.Pages
     {
 
       
-        IAtConfiguration _iatConfiguration;
+        IConfigurationReader _iatConfiguration;
         IDriver _idrivers;
 
         IAtBy byUsername => GetBy(LocatorType.XPath, "//input[@id='user-name']");      
@@ -28,7 +28,7 @@ namespace Automation.DemoUI.Pages
         IAtWebElement Password => _idrivers.FindElement(byPassword);      
         IAtBy byLogin => GetBy(LocatorType.XPath, "//input[@id='login-button']");
         IAtWebElement Login => _idrivers.FindElement(byLogin);
-        public LoginPage(IAtConfiguration iatConfiguration, IDriver idrivers,IObjectContainer objectContainer):base(objectContainer)
+        public LoginPage(IConfigurationReader iatConfiguration, IDriver idrivers,IObjectContainer objectContainer):base(objectContainer)
         {
             _iatConfiguration = iatConfiguration;
             _idrivers = idrivers;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Automation.DemoUI.WebAbstraction
 {
-    public interface IAtConfiguration
+    public interface IConfigurationReader
     {
 
         public string GetConfiguration(string key);

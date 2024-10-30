@@ -12,7 +12,7 @@ namespace Automation.DemoUi.Pages
 {
     public class SwagLabPage : TestBase, ISwagLabPage
     {
-        IAtConfiguration _iatConfiguration;
+        IConfigurationReader _iatConfiguration;
         IDriver _idriver;
         ScenarioContext _scenarioContext;
         IAtBy byProductItems => GetBy(LocatorType.Xpath, "//div[@class='inventory_list']/div");
@@ -30,7 +30,7 @@ namespace Automation.DemoUi.Pages
         IAtBy byCartContainer => GetBy(LocatorType.Xpath, "//div[@id='shopping_cart_container']//a[@class='shopping_cart_link']");
 
         IAtWebElement CartContainer => _idriver.FindElement(byCartContainer);
-        public SwagLabPage(IObjectContainer iobjectContainer, IAtConfiguration iatConfiguration, IDriver idrivers, ScenarioContext scenarioContext)
+        public SwagLabPage(IObjectContainer iobjectContainer, IConfigurationReader iatConfiguration, IDriver idrivers, ScenarioContext scenarioContext)
             : base(iobjectContainer)
         {
             _iatConfiguration = iatConfiguration;

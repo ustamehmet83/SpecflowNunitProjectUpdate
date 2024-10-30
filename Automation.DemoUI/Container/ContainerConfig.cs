@@ -31,7 +31,7 @@ namespace Automation.DemoUI.Container
             iobjectContainer.RegisterTypeAs<GlobalProperties, IGlobalProperties>();
             iobjectContainer.RegisterTypeAs<ExtentFeatureReport, IExtentFeatureReport>();
             iobjectContainer.RegisterTypeAs<ExtentReport, IExtentReport>();
-            iobjectContainer.RegisterTypeAs<AtConfiguration, IAtConfiguration>();
+            iobjectContainer.RegisterTypeAs<ConfigurationReader, IConfigurationReader>();
             iobjectContainer.RegisterTypeAs<LoginPage, ILoginPage>();
             iobjectContainer.RegisterTypeAs<SwagLabPage, ISwagLabPage>();         
             iobjectContainer.RegisterTypeAs<ChromeWebDriver, IChromeWebDriver>();
@@ -39,7 +39,7 @@ namespace Automation.DemoUI.Container
             iobjectContainer.RegisterTypeAs<Driver, IDriver>();
             iobjectContainer.RegisterTypeAs<AtBy, IAtBy>();
             iobjectContainer.RegisterTypeAs<AtWebElement, IAtWebElement>();
-            iobjectContainer.RegisterTypeAs<ConfigurationReader, IAtConfiguration>();
+            iobjectContainer.RegisterTypeAs<ConfigurationReader, IConfigurationReader>();
             
         }   
     }

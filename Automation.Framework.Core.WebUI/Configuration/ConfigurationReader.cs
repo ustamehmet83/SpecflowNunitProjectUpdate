@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Automation.DemoUI.Configuration
 {
-    public class ConfigurationReader:IAtConfiguration
+    public class ConfigurationReader:IConfigurationReader
     {
         IConfiguration _iconfiguration;
         IDefaultVariables _idefaultVariables;

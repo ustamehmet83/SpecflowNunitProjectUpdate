@@ -1,4 +1,5 @@
-﻿using Automation.DemoUI.Pages;
+﻿using Automation.DemoUI.Configuration;
+using Automation.DemoUI.Pages;
 using Automation.DemoUI.WebAbstraction;
 using Automation.Framework.Core.WebUI.Abstractions;
 using BoDi;
@@ -16,10 +17,10 @@ namespace Automation.DemoUI.Steps
     public class LoginSteps
     {
         ILoginPage _iloginPage;
-        IAtConfiguration _iatConfiguration;
-        public LoginSteps(IAtConfiguration iatConfiguration,IDriver idrivers, IObjectContainer objectContainer,ILoginPage iloginpage)
+        
+        public LoginSteps(IDriver idrivers,ILoginPage iloginpage)
         {
-            _iatConfiguration = iatConfiguration;
+            
             _iloginPage = iloginpage;
             
             
@@ -28,7 +29,7 @@ namespace Automation.DemoUI.Steps
         [Given(@"login with valid credentials")]
         public void GivenLoginWithValidCredentials()
         {
-            _iloginPage.LoginWithValidCredentials(_iatConfiguration.GetConfiguration("username"), _iatConfiguration.GetConfiguration("password"));
+            _iloginPage.LoginWithValidCredentials(ConfigurationReader.GetJsonConfigurationValue("username"), ConfigurationReader.GetJsonConfigurationValue("password"));
         }
 
 

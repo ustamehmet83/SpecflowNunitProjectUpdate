@@ -15,9 +15,9 @@ namespace Automation.Framework.Core.WebUI.Selenium.LocalWebDrivers
     public class FirefoxWebDriver : IFirefoxWebDriver
     {
         IGlobalProperties _iglobalProperties;
-        public FirefoxWebDriver()
+        public FirefoxWebDriver(IGlobalProperties iglobalProperties)
         {
-            _iglobalProperties = SpecflowRunner._iserviceProvider.GetRequiredService<IGlobalProperties>();
+            _iglobalProperties = iglobalProperties;
         }
 
         public IWebDriver GetFirefoxDriver()

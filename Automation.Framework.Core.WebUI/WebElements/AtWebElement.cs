@@ -3,6 +3,7 @@ using Automation.Framework.Core.WebUI.Abstractions;
 
 using Automation.Framework.Core.WebUI.CustomExceptions;
 using Automation.Framework.Core.WebUI.Runner;
+using BoDi;
 using Microsoft.Extensions.DependencyInjection;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
@@ -21,11 +22,13 @@ namespace Automation.Framework.Core.WebUI.WebElements
         IWebDriver _iwebDriver;
         IAtBy _iatBy;
         ILogging _ilogging;
-        public void Set(IWebDriver iwebDriver, IAtBy iatBy)
+        IObjectContainer _iobjectContainer;
+        public void Set(IWebDriver iwebDriver, IAtBy iatBy,IObjectContainer iobjectContainer)
         {
             _iwebDriver = iwebDriver;
             _iatBy = iatBy;
-            _ilogging = SpecflowRunner._iserviceProvider.GetRequiredService<ILogging>();
+            _iobjectContainer = iobjectContainer;
+            _ilogging = _iobjectContainer.Resolve<ILogging>();
         }
 
         int IAtWebElement.NumberOfElement => _iwebDriver.FindElements(_iatBy.By).Count();

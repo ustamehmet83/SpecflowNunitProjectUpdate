@@ -1,5 +1,6 @@
 ﻿using Automation.DemoUI.WebAbstraction;
 using Automation.Framework.Core.WebUI.Abstractions;
+using Automation.Framework.Core.WebUI.Params;
 using Automation.Framework.Core.WebUI.Runner;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,10 +15,11 @@ namespace Automation.DemoUI.Configuration
     public class AtConfiguration:IAtConfiguration
     {
         IConfiguration _iconfiguration;
-        public AtConfiguration()
+        IDefaultVariables _idefaultVariables;
+        public AtConfiguration(IDefaultVariables idefaultVariables)
         {
-            IDefaultVariables idefaultVariables=SpecflowRunner._iserviceProvider.GetRequiredService<IDefaultVariables>();
-            _iconfiguration = new ConfigurationBuilder().AddJsonFile(idefaultVariables.getApplicationConfigjson).Build();
+            _idefaultVariables= idefaultVariables;
+             _iconfiguration = new ConfigurationBuilder().AddJsonFile(_idefaultVariables.getApplicationConfigjson).Build();
 
 
         }

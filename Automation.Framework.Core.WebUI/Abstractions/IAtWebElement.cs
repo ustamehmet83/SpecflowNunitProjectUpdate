@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using BoDi;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Automation.Framework.Core.WebUI.Abstractions
     {
         void Click();
         void SendKeys(string text);
-        void Set(IWebDriver iwebDriver, IAtBy iatBy);
+        void Set(IWebDriver iwebDriver, IAtBy iatBy, IObjectContainer iobjectContainer);
         void ClearText();
         string GetText();
         string GetAttribute(string attributeName);

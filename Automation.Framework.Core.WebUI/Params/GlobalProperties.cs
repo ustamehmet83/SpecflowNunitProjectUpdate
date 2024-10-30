@@ -1,4 +1,5 @@
 ﻿using Automation.Framework.Core.WebUI.Abstractions;
+using BoDi;
 using Gherkin.CucumberMessages.Types;
 using Microsoft.Extensions.Configuration;
 using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities.Resources;
@@ -14,6 +15,7 @@ namespace Automation.Framework.Core.WebUI.Params
     {
         IDefaultVariables _idefaultVariables;
         ILogging _ilogging;
+        IObjectContainer _iojectContainer;
         IExtentFeatureReport _iextentFeatureReport;
         public string browsertype { get; set; }
         public string gridhuburl { get; set; }
@@ -23,9 +25,10 @@ namespace Automation.Framework.Core.WebUI.Params
         public string loglevel { get; set; }
         public string datasetlocation { get; set; }
         public string downloadedlocation { get; set; }
-        public GlobalProperties(IDefaultVariables idefaultVariables, ILogging ilogging, IExtentFeatureReport iextentFeatureReport)
+        public GlobalProperties(IDefaultVariables idefaultVariables, ILogging ilogging, IExtentFeatureReport iextentFeatureReport,IObjectContainer iobjectContainer)
         {
             _idefaultVariables = idefaultVariables;
+            _iojectContainer = iobjectContainer;
             _ilogging = ilogging;
             _iextentFeatureReport = iextentFeatureReport;
             Configuration();

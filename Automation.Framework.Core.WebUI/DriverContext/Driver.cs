@@ -10,6 +10,7 @@ using Automation.Framework.Core.WebUI.Runner;
 using Microsoft.Extensions.DependencyInjection;
 using BoDi;
 using Automation.Framework.Core.WebUI.Abstractions;
+using Automation.Framework.Core.WebUI.Params;
 
 namespace Automation.Framework.Core.WebUI.DriverContext
 {
@@ -19,11 +20,13 @@ namespace Automation.Framework.Core.WebUI.DriverContext
         IFirefoxWebDriver _ifirefoxWebDriver;
         IWebDriver _iwebDriver;
         IObjectContainer _iobjectContainer;
-        public Driver(IChromeWebDriver ichromeWebDriver, IFirefoxWebDriver ifirefoxWebDriver, IObjectContainer iobjectContainer)
+        IGlobalProperties _iglobalProperties;
+        public Driver(IChromeWebDriver ichromeWebDriver, IFirefoxWebDriver ifirefoxWebDriver, IObjectContainer iobjectContainer, IGlobalProperties iglobalProperties)
         {
             _ichromeWebDriver = ichromeWebDriver;
             _ifirefoxWebDriver = ifirefoxWebDriver;
             _iobjectContainer = iobjectContainer;
+            _iglobalProperties = iglobalProperties;
         }
 
         public IWebDriver GetWebDriver()
@@ -37,7 +40,7 @@ namespace Automation.Framework.Core.WebUI.DriverContext
 
         public void GetNewWebDriver()
         {
-            IGlobalProperties _iglobalProperties = SpecflowRunner._iserviceProvider.GetRequiredService<IGlobalProperties>();
+           
             switch (_iglobalProperties.browsertype.ToLower())
             {
                 case "chrome":
@@ -59,7 +62,7 @@ namespace Automation.Framework.Core.WebUI.DriverContext
         public IAtWebElement FindElement(IAtBy iatBy)
         {
             IAtWebElement iatWebElement = _iobjectContainer.Resolve<IAtWebElement>();
-            iatWebElement.Set(GetWebDriver(), iatBy);
+            iatWebElement.Set(GetWebDriver(), iatBy, _iobjectContainer);
             return iatWebElement;
         }
         public void CloseBrowser()

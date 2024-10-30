@@ -20,16 +20,16 @@ namespace Automation.Framework.Core.WebUI.DIContainer
 {
     public class CoreContainerConfig
     {
-        public static IServiceProvider ConfigureServices()
-        {
-            IServiceCollection services = new ServiceCollection();
-            services.AddSingleton<IDefaultVariables,DefaultVariables>();
-            services.AddSingleton<ILogging,Logging>();
-            services.AddSingleton<IGlobalProperties,GlobalProperties>();
-            services.AddSingleton<IExtentFeatureReport, ExtentFeatureReport>();
-            services.AddTransient<IExtentReport,ExtentReport>();
-            return services.BuildServiceProvider();
-        }
+       // public static IServiceProvider ConfigureServices()
+        //{
+          //  IServiceCollection services = new ServiceCollection();
+            //services.AddSingleton<IDefaultVariables,DefaultVariables>();
+            //services.AddSingleton<ILogging,Logging>();
+            //services.AddSingleton<IGlobalProperties,GlobalProperties>();
+            //services.AddSingleton<IExtentFeatureReport, ExtentFeatureReport>();
+            //services.AddTransient<IExtentReport,ExtentReport>();
+            //return services.BuildServiceProvider();
+        //}
 
       
 

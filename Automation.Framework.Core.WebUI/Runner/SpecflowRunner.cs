@@ -14,20 +14,20 @@ namespace Automation.Framework.Core.WebUI.Runner
     [Binding]
     public class SpecflowRunner
     {
-        public static IServiceProvider _iserviceProvider;
-        [BeforeTestRun]
-        public static void BeforeTestRun()
-        {
-            _iserviceProvider = CoreContainerConfig.ConfigureServices();
-            _iserviceProvider.GetRequiredService<IGlobalProperties>();
-        }
+        //public static IServiceProvider _iserviceProvider;
+        //[BeforeTestRun]
+        //public static void BeforeTestRun()
+        //{
+            //_iserviceProvider = CoreContainerConfig.ConfigureServices();
+            //_iserviceProvider.GetRequiredService<IGlobalProperties>();
+        //}
 
-        [BeforeFeature]
-        public static void BeforeFeature(FeatureContext fs)
-        {
-            IExtentReport iextentReport=_iserviceProvider.GetRequiredService<IExtentReport>();
-            iextentReport.CreateFeature(fs.FeatureInfo.Title);
-            fs["iextentreport"] = iextentReport;
-        }
+        //[BeforeFeature]
+        //public static void BeforeFeature(FeatureContext fs)
+        //{
+            //IExtentReport iextentReport=_iserviceProvider.GetRequiredService<IExtentReport>();
+            //iextentReport.CreateFeature(fs.FeatureInfo.Title);
+            //fs["iextentreport"] = iextentReport;
+        //}
     }
 }

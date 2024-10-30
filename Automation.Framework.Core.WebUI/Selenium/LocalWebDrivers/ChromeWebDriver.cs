@@ -15,9 +15,9 @@ namespace Automation.Framework.Core.WebUI.Selenium.LocalWebDrivers
     public class ChromeWebDriver : IChromeWebDriver
     {
         IGlobalProperties _iglobalProperties;
-        public ChromeWebDriver()
+        public ChromeWebDriver(IGlobalProperties iglobalProperties)
         {
-            _iglobalProperties = SpecflowRunner._iserviceProvider.GetRequiredService<IGlobalProperties>();
+            _iglobalProperties = iglobalProperties;
         }
 
         public  IWebDriver GetChromeWebDriver()

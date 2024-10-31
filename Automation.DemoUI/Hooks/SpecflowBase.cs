@@ -21,11 +21,13 @@ namespace Automation.DemoUI.Hooks
         IGlobalProperties _iglobalProperties;  
         ScenarioContext _scenarioContext;
         IDriver _idrivers;
+        IWebDriver _driver;
         IExtentReport extentReport;
         IExtentFeatureReport _iextentFeatureReport;
         public SpecflowBase(IDriver idrivers)
         {
             _idrivers = idrivers;
+
         }
 
         [BeforeTestRun]
@@ -75,5 +77,17 @@ namespace Automation.DemoUI.Hooks
             _iextentFeatureReport.FlushExtent();
             _idrivers.CloseBrowser();
         }
+
+
+        [AfterTestRun]
+        public static void AfterTestRun()
+        {
+
+            DBUtils.Destroy();
+        }
+
+
+
+
     }
 }

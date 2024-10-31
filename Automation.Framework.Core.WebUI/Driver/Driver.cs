@@ -20,12 +20,13 @@ namespace Automation.Framework.Core.WebUI.DriverContext
         IWebDriver _iwebDriver;
         IObjectContainer _iobjectContainer;
         IGlobalProperties _iglobalProperties;
-        public Driver(IChromeWebDriver ichromeWebDriver, IFirefoxWebDriver ifirefoxWebDriver, IObjectContainer iobjectContainer, IGlobalProperties iglobalProperties)
+        public Driver(IChromeWebDriver ichromeWebDriver, IFirefoxWebDriver ifirefoxWebDriver, IObjectContainer iobjectContainer, IGlobalProperties iglobalProperties,IDriver driver)
         {
             _ichromeWebDriver = ichromeWebDriver;
             _ifirefoxWebDriver = ifirefoxWebDriver;
             _iobjectContainer = iobjectContainer;
             _iglobalProperties = iglobalProperties;
+            _iwebDriver=driver.GetWebDriver();
         }
 
         public IWebDriver GetWebDriver()

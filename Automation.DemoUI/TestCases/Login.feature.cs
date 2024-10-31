@@ -32,7 +32,7 @@ namespace Automation.DemoUI.TestCases
                 "login",
                 "smoke"};
         
-#line 1 "Login1.feature"
+#line 1 "Login.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]

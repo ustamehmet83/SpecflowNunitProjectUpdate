@@ -11,6 +11,7 @@ using SeleniumExtras.WaitHelpers;
 using Automation.Framework.Core.WebUI.DriverContext;
 using SeleniumExtras.PageObjects;
 using Automation.DemoUI.WebAbstraction;
+using AngleSharp.Dom;
 
 namespace Automation.Framework.Core.WebUI.Utilities
 {
@@ -98,6 +99,68 @@ namespace Automation.Framework.Core.WebUI.Utilities
             WaitForClickable(element);
             ClickWithJS(element);
         }
+
+        public  void WaitForInvisibility(IWebElement webElement)
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+
+            for (int i = 0; i < 5; i++)
+            {
+                try
+                {
+                    wait.Until(d => !webElement.Displayed);
+                    break; // Exit the loop if the element is visible
+                }
+                catch (StaleElementReferenceException)
+                {
+                    continue;
+                }
+                catch (WebDriverTimeoutException)
+                {
+                    throw new TimeoutException($"Element is visible after 30 seconds.");
+                }
+                catch (Exception e)
+                {
+                    throw new Exception($"Element is visible: {e.Message}");
+                }
+            }
+        }
+
+        public void WaitForTextVisibility(IWebDriver driver, IWebElement webElement, string text, int timeoutInSeconds = 30)
+        {
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);
+
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutInSeconds));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.TextToBePresentInElementValue(webElement, text));
+        }
+
+        public void WaitForTextNotVisibility(IWebElement webElement, string text)
+        {
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+            wait.Until(TextToBeNotEqualElementValue(webElement, text));
+        }
+
+
+        public Func<IWebDriver, bool> TextToBeNotEqualElementValue(IWebElement element, string text)
+        {
+            return driver =>
+            {
+                try
+                {
+                    string elementText = element.GetAttribute("value");
+                    return elementText != null && !elementText.Equals(text);
+                }
+                catch (StaleElementReferenceException)
+                {
+                    return false;
+                }
+            };
+        }
+
+
+
+
 
 
     }

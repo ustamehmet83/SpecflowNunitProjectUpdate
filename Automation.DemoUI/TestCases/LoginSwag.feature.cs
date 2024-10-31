@@ -28,7 +28,7 @@ namespace Automation.DemoUI.TestCases
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "Login.feature"
+#line 1 "LoginSwag.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]

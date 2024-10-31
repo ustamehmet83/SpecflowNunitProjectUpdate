@@ -18,16 +18,6 @@
 
   <ItemGroup>
     <Folder Include="DataSet\" />
-    <Folder Include="Result\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Resources\applicationConfig.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Resources\frameworkSettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

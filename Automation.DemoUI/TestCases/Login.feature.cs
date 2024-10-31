@@ -20,22 +20,26 @@ namespace Automation.DemoUI.TestCases
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Login")]
-    public partial class LoginFeature
+    [NUnit.Framework.DescriptionAttribute("Login feature")]
+    [NUnit.Framework.CategoryAttribute("login")]
+    [NUnit.Framework.CategoryAttribute("smoke")]
+    public partial class LoginFeatureFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private static string[] featureTags = ((string[])(null));
+        private static string[] featureTags = new string[] {
+                "login",
+                "smoke"};
         
-#line 1 "Login.feature"
+#line 1 "Login1.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TestCases", "Login", "A short summary of the feature", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TestCases", "Login feature", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -73,17 +77,24 @@ namespace Automation.DemoUI.TestCases
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Login with functionality")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public void LoginWithFunctionality()
+        public virtual void FeatureBackground()
         {
-            string[] tagsOfScenario = new string[] {
-                    "mytag"};
+#line 4
+  #line hidden
+#line 5
+    testRunner.Given("kullanıcı netrex giris sayfasında olmalı", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("admin olarak giris yapalım")]
+        public void AdminOlarakGirisYapalım()
+        {
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login with functionality", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 6
-this.ScenarioInitialize(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("admin olarak giris yapalım", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 7
+  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -92,22 +103,28 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 7
- testRunner.Given("login with valid credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 4
+  this.FeatureBackground();
+#line hidden
+#line 8
+    testRunner.When("admin SOEID Yi girer passwordu girer ve login butonuna basar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 9
+    testRunner.Then("admin sağ üst köşede \"usersoeid\" görmeli", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Login with Invalid functionality")]
-        public void LoginWithInvalidFunctionality()
+        [NUnit.Framework.DescriptionAttribute("kullanıcı olarak giris yapalım")]
+        public void KullanıcıOlarakGirisYapalım()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login with Invalid functionality", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 9
-this.ScenarioInitialize(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("kullanıcı olarak giris yapalım", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 11
+  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -116,8 +133,51 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 10
- testRunner.Given("login with invalid credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 4
+  this.FeatureBackground();
+#line hidden
+#line 12
+    testRunner.When("kullanıcı SOEID Yi girer passwordu girer ve login butonuna basar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 13
+    testRunner.Then("kullanıcı sağ üst köşede \"adminsoeid\" görmeli", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("kullanıcı geçersiz bilgilerle giriş yapar")]
+        [NUnit.Framework.TestCaseAttribute("hazal.oncel@hedefbank.com.tr", "", "Error: Password Can Not Be Empty", null)]
+        [NUnit.Framework.TestCaseAttribute("", "Password123*", "Error: Username Can Not Be Empty", null)]
+        [NUnit.Framework.TestCaseAttribute("", "", "Error: Username Can Not Be Empty", null)]
+        [NUnit.Framework.TestCaseAttribute("ıncorrect", "incorrect", "Error: Incorrect Username or Password", null)]
+        public void KullanıcıGecersizBilgilerleGirisYapar(string sOEID, string password, string alert, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("SOEID", sOEID);
+            argumentsOfScenario.Add("password", password);
+            argumentsOfScenario.Add("alert", alert);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("kullanıcı geçersiz bilgilerle giriş yapar", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 15
+  this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 4
+  this.FeatureBackground();
+#line hidden
+#line 16
+    testRunner.When(string.Format("kullanıcı geçersiz \"{0}\" ve geçersiz \"{1}\" girer", sOEID, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 17
+    testRunner.Then(string.Format("kullanıcı \"{0}\" mesajı görmeli", alert), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -32,7 +32,6 @@ namespace Automation.Framework.Core.WebUI.DriverContext
         {
             ChromeOptions options = new ChromeOptions();
             options.AcceptInsecureCertificates = true;
-
             options.AddExcludedArgument("enable-automation");
             options.AddArgument("disable-extensions");
             options.AddArgument("disable-infobars");

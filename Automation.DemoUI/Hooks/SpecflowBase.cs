@@ -1,4 +1,5 @@
 ﻿using Automation.Framework.Core.WebUI.Abstractions;
+using Automation.Framework.Core.WebUI.Utilities;
 using BoDi;
 using Microsoft.Extensions.DependencyInjection;
 using OpenQA.Selenium;
@@ -25,6 +26,13 @@ namespace Automation.DemoUI.Hooks
         public SpecflowBase(IDriver idrivers)
         {
             _idrivers = idrivers;
+        }
+
+        [BeforeTestRun]
+        public static void BeforeTestRun()
+        {
+            DBUtils.CreateConnection();
+            DBUtils.SslContext();          
         }
 
         [BeforeScenario(Order = 2)]

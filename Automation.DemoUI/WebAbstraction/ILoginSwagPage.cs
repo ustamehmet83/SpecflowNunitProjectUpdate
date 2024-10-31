@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Automation.DemoUI.WebAbstraction
 {
-    public interface ILoginPage
+    public interface ILoginSwagPage
     {
 
         public void LoginWithValidCredentials(string username, string password);

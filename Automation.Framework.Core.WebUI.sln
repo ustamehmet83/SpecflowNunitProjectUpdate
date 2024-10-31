@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation.Framework.Core.WebUI", "Automation.Framework.Core.WebUI\Automation.Framework.Core.WebUI.csproj", "{EB8D98DA-BAB1-42D3-9E88-69576057518A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Automation.Framework.Core.WebUI", "Automation.Framework.Core.WebUI\Automation.Framework.Core.WebUI.csproj", "{EB8D98DA-BAB1-42D3-9E88-69576057518A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation.DemoUI", "Automation.DemoUI\Automation.DemoUI.csproj", "{2D7C454F-250B-4878-BD28-18B0DADB658E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation.DemoUI.Test", "Automation.DemoUI.Test\Automation.DemoUI.Test.csproj", "{9F35D529-2E87-498D-BC85-68A331183637}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Automation.DemoUI", "Automation.DemoUI\Automation.DemoUI.csproj", "{2D7C454F-250B-4878-BD28-18B0DADB658E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{2D7C454F-250B-4878-BD28-18B0DADB658E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D7C454F-250B-4878-BD28-18B0DADB658E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D7C454F-250B-4878-BD28-18B0DADB658E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F35D529-2E87-498D-BC85-68A331183637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F35D529-2E87-498D-BC85-68A331183637}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F35D529-2E87-498D-BC85-68A331183637}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F35D529-2E87-498D-BC85-68A331183637}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

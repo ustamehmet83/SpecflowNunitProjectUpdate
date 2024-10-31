@@ -1,61 +1,44 @@
-﻿using OpenQA.Selenium.Chrome;
+﻿using Automation.DemoUI.WebAbstraction;
+using Automation.Framework.Core.WebUI.Abstractions;
+using Automation.Framework.Core.WebUI.Utilities;
 using OpenQA.Selenium;
+using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebDriverManager.DriverConfigs.Impl;
-using Automation.DemoUI.WebAbstraction;
-using Automation.Framework.Core.WebUI.Abstractions;
-using Automation.DemoUI.Configuration;
-using Automation.Framework.Core.WebUI.Base;
-using BoDi;
-using Automation.Framework.Core.WebUI.DriverContext;
 
 namespace Automation.DemoUI.Pages
 {
-    public class LoginPage:TestBase,ILoginPage
+    public class LoginPage:BasePage
     {
-
-      
-        IConfigurationReader _iatConfiguration;
-        IDriver _idrivers;
-
-        IAtBy byUsername => GetBy(LocatorType.XPath, "//input[@id='user-name']");      
-        IAtWebElement UserName => _idrivers.FindElement(byUsername);
-        IAtBy byPassword=> GetBy(LocatorType.XPath, "//input[@id='password']");
-        IAtWebElement Password => _idrivers.FindElement(byPassword);      
-        IAtBy byLogin => GetBy(LocatorType.XPath, "//input[@id='login-button']");
-        IAtWebElement Login => _idrivers.FindElement(byLogin);
-        public LoginPage(IConfigurationReader iatConfiguration, IDriver idrivers,IObjectContainer objectContainer):base(objectContainer)
+        public LoginPage(IDriver driver) : base(driver)
         {
-            _iatConfiguration = iatConfiguration;
-            _idrivers = idrivers;
-
-        }
-        public void LoginWithValidCredentials(string username, string password)
-        {
-            string url = _iatConfiguration.GetConfiguration("url");        
-            _idrivers.NavigateTo(url);
-            Thread.Sleep(3000);
-            UserName.SendKeys(username);
-            Password.SendKeys(password);
-            Login.Click();
         }
 
-        public void LoginWithInvalidCredentials(string username, string password)
+        [FindsBy(How = How.Id, Using = "username")]
+        public IWebElement Username { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//input[@id='password']")]
+        public IWebElement Password { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//div[@id='btn-login']/div/span")]
+        public IWebElement LoginBtn { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//div[@class='alert alert-danger alert-dismissible fade show']")]
+        public IWebElement Alert { get; set; }
+
+        public void Login(string userName, string passWord)
         {
-            string url = _iatConfiguration.GetConfiguration("url");
-            _idrivers.NavigateTo(url);
-            Thread.Sleep(3000);
-            UserName.SendKeys(username);
-            Password.SendKeys(password);
-            Login.Click();
+            WaitForVisibilityClickableAndClickWithJS(Username);
+            Username.SendKeys(userName);
+
+            WaitForVisibilityClickableAndClickWithJS(Password);
+            Password.SendKeys(passWord);
+
+            LoginBtn.Click();
         }
-
-
-
 
 
     }

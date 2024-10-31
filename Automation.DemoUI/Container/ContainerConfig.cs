@@ -7,6 +7,7 @@ using Automation.Framework.Core.WebUI.Abstractions;
 using Automation.Framework.Core.WebUI.DriverContext;
 using Automation.Framework.Core.WebUI.Params;
 using Automation.Framework.Core.WebUI.Reports;
+using Automation.Framework.Core.WebUI.Utilities;
 using Automation.Framework.Core.WebUI.WebElements;
 using BoDi;
 using System;
@@ -32,15 +33,23 @@ namespace Automation.DemoUI.Container
             iobjectContainer.RegisterTypeAs<ExtentFeatureReport, IExtentFeatureReport>();
             iobjectContainer.RegisterTypeAs<ExtentReport, IExtentReport>();
             iobjectContainer.RegisterTypeAs<ConfigurationReader, IConfigurationReader>();
-            iobjectContainer.RegisterTypeAs<LoginPage, ILoginPage>();
-            iobjectContainer.RegisterTypeAs<SwagLabPage, ISwagLabPage>();         
             iobjectContainer.RegisterTypeAs<ChromeWebDriver, IChromeWebDriver>();
             iobjectContainer.RegisterTypeAs<FirefoxWebDriver, IFirefoxWebDriver>();
             iobjectContainer.RegisterTypeAs<Driver, IDriver>();
             iobjectContainer.RegisterTypeAs<AtBy, IAtBy>();
             iobjectContainer.RegisterTypeAs<AtWebElement, IAtWebElement>();
             iobjectContainer.RegisterTypeAs<ConfigurationReader, IConfigurationReader>();
-            
+            iobjectContainer.RegisterTypeAs<BrowserUtils, BrowserUtils>();
+            iobjectContainer.RegisterTypeAs<LoginPageSwag, ILoginSwagPage>();
+            iobjectContainer.RegisterTypeAs<SwagLabPage, ISwagLabPage>();
+            iobjectContainer.RegisterTypeAs<BasePage,BasePage>();
+            iobjectContainer.RegisterTypeAs<DashBoardPage, DashBoardPage>();
+            iobjectContainer.RegisterTypeAs<LoginPage, LoginPage>();
+
+
+
+
+
         }   
     }
 }

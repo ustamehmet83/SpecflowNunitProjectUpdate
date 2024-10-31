@@ -1,0 +1,10 @@
+{
+  "url": "http://192.168.10.221:5032/Login",
+  "adminsoeid": "hazineiki@investmentbank.com",
+  "adminpassword": "Netix2024*-5=",
+  "usersoeid": "hazinebir@investmentbank.com",
+  "userpassword": "Netix2024*-5=",
+  "guestrul": "https://www.makemytrip.com/",
+  "dbUrl": "Server=192.168.10.211;Database=NetTrexFX_Dev;User Id=sa;Password=fCK2uTCJxC;MultipleActiveResultSets=true;Timeout=300;TrustServerCertificate=True;"
+}
+

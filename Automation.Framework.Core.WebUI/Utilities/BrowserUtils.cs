@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Automation.Framework.Core.WebUI.Abstractions;
 using SeleniumExtras.WaitHelpers;
-using Automation.Framework.Core.WebUI.DriverContext;
+using Automation.Framework.Core.WebUI.Driver;
 using SeleniumExtras.PageObjects;
 using Automation.DemoUI.WebAbstraction;
 using AngleSharp.Dom;

@@ -4,7 +4,7 @@ using Automation.DemoUI.Configuration;
 using Automation.DemoUI.Pages;
 using Automation.DemoUI.WebAbstraction;
 using Automation.Framework.Core.WebUI.Abstractions;
-using Automation.Framework.Core.WebUI.DriverContext;
+using Automation.Framework.Core.WebUI.Driver;
 using Automation.Framework.Core.WebUI.Params;
 using Automation.Framework.Core.WebUI.Reports;
 using Automation.Framework.Core.WebUI.Utilities;

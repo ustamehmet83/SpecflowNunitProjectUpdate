@@ -11,7 +11,7 @@ using Automation.Framework.Core.WebUI.Abstractions;
 using Automation.DemoUI.Configuration;
 using Automation.Framework.Core.WebUI.Base;
 using BoDi;
-using Automation.Framework.Core.WebUI.DriverContext;
+using Automation.Framework.Core.WebUI.Driver;
 
 namespace Automation.DemoUI.Pages
 {

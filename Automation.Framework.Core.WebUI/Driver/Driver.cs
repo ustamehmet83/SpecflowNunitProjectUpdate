@@ -11,7 +11,7 @@ using BoDi;
 using Automation.Framework.Core.WebUI.Abstractions;
 using Automation.Framework.Core.WebUI.Params;
 
-namespace Automation.Framework.Core.WebUI.DriverContext
+namespace Automation.Framework.Core.WebUI.Driver
 {
     public class Driver : IDriver
     {

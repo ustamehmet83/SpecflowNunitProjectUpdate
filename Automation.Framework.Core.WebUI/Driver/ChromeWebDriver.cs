@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebDriverManager.DriverConfigs.Impl;
 
-namespace Automation.Framework.Core.WebUI.DriverContext
+namespace Automation.Framework.Core.WebUI.Driver
 {
     public class ChromeWebDriver : IChromeWebDriver
     {

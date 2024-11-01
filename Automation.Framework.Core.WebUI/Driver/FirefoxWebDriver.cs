@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using WebDriverManager.DriverConfigs.Impl;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Automation.Framework.Core.WebUI.DriverContext
+namespace Automation.Framework.Core.WebUI.Driver
 {
     public class FirefoxWebDriver : IFirefoxWebDriver
     {

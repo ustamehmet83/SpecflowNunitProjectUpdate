@@ -14,19 +14,19 @@ namespace Automation.DemoUI.Steps
     {
         private readonly LoginPage _loginPage;
         private readonly DashBoardPage _dashBoardPage;
-        private readonly IWebDriver _driver;
-        public LoginFeatureStepDefinitions(LoginPage loginPage, IDriver driver, DashBoardPage dashBoardPage)
+        private readonly IDriver _idriver;
+        public LoginFeatureStepDefinitions(LoginPage loginPage, DashBoardPage dashBoardPage, IDriver idriver)
         {
             _loginPage = loginPage;
             _dashBoardPage = dashBoardPage;
-            _driver = driver.GetWebDriver();
+            _idriver = idriver;         
         }
 
 
         [Given(@"kullanıcı netrex giris sayfasında olmalı")]
         public void GivenKullanıcıNetrexGirisSayfasındaOlmalı()
         {
-            _driver.Navigate().GoToUrl(ConfigurationReader.GetJsonConfigurationValue("url"));
+            _idriver.GetWebDriver().Navigate().GoToUrl(ConfigurationReader.GetJsonConfigurationValue("url"));
         }
 
         [When(@"admin SOEID Yi girer passwordu girer ve login butonuna basar")]
@@ -36,9 +36,17 @@ namespace Automation.DemoUI.Steps
         }
 
         [Then(@"admin sağ üst köşede ""([^""]*)"" görmeli")]
-        public void ThenAdminSağUstKosedeGormeli(string usersoeid)
+        public void ThenAdminSağUstKosedeGormeli(string expectedName)
         {
-            
+            expectedName = ConfigurationReader.GetJsonConfigurationValue("adminsoeid").ToUpperInvariant();
+            _loginPage.WaitForVisibilityClickableAndClickWithJS(_dashBoardPage.UserIcon);
+            string actualStateMaker = _dashBoardPage.HeaderUserName.Text.Trim();
+            Assert.That(actualStateMaker, Is.EqualTo(expectedName));
+            string stateMakerAdmin = actualStateMaker;
+            string stateMaker = actualStateMaker;
+            string traderValue = actualStateMaker;
+
+            ((IJavaScriptExecutor)_idriver.GetWebDriver()).ExecuteScript("$('#userPopup').dxPopup('hide');");
         }
 
         [When(@"kullanıcı SOEID Yi girer passwordu girer ve login butonuna basar")]
@@ -50,7 +58,7 @@ namespace Automation.DemoUI.Steps
         [Then(@"kullanıcı sağ üst köşede ""([^""]*)"" görmeli")]
         public void ThenKullanıcıSağUstKosedeGormeli(string expectedName)
         {
-            expectedName = ConfigurationReader.GetJsonConfigurationValue("adminsoeid").ToUpperInvariant();
+            expectedName = ConfigurationReader.GetJsonConfigurationValue("usersoeid").ToUpperInvariant();
             _loginPage.WaitForVisibilityClickableAndClickWithJS(_dashBoardPage.UserIcon);         
             string actualStateMaker = _dashBoardPage.HeaderUserName.Text.Trim();
             Assert.That(actualStateMaker, Is.EqualTo(expectedName));           
@@ -58,7 +66,7 @@ namespace Automation.DemoUI.Steps
             string stateMaker = actualStateMaker;
             string traderValue = actualStateMaker;
 
-            ((IJavaScriptExecutor)_driver).ExecuteScript("$('#userPopup').dxPopup('hide');");
+            ((IJavaScriptExecutor)_idriver.GetWebDriver()).ExecuteScript("$('#userPopup').dxPopup('hide');");
         }
 
         [When(@"kullanıcı geçersiz ""([^""]*)"" ve geçersiz ""([^""]*)"" girer")]
@@ -68,17 +76,10 @@ namespace Automation.DemoUI.Steps
         }
 
         [Then(@"kullanıcı ""([^""]*)"" mesajı görmeli")]
-        public void ThenKullanıcıMesajıGormeli(string expectedName)
+        public void ThenKullanıcıMesajıGormeli(string expectedText)
         {
-            expectedName = ConfigurationReader.GetJsonConfigurationValue("usersoeid").ToUpperInvariant();
-            _loginPage.WaitForVisibilityClickableAndClickWithJS(_dashBoardPage.UserIcon);
-            string actualStateMaker = _dashBoardPage.HeaderUserName.Text.Trim();
-            Assert.That(actualStateMaker, Is.EqualTo(expectedName));
-            string stateMakerAdmin = actualStateMaker;
-            string stateMaker = actualStateMaker;
-            string traderValue = actualStateMaker;
-
-            ((IJavaScriptExecutor)_driver).ExecuteScript("$('#userPopup').dxPopup('hide');");
+            String actual = _loginPage.Alert.Text.Substring(_loginPage.Alert.Text.IndexOf("Error"));
+            Assert.That(expectedText, Is.EqualTo(actual));
         }
     }
 }

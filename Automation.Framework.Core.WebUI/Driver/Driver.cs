@@ -15,18 +15,18 @@ namespace Automation.Framework.Core.WebUI.DriverContext
 {
     public class Driver : IDriver
     {
-        IChromeWebDriver _ichromeWebDriver;
-        IFirefoxWebDriver _ifirefoxWebDriver;
-        IWebDriver _iwebDriver;
-        IObjectContainer _iobjectContainer;
-        IGlobalProperties _iglobalProperties;
-        public Driver(IChromeWebDriver ichromeWebDriver, IFirefoxWebDriver ifirefoxWebDriver, IObjectContainer iobjectContainer, IGlobalProperties iglobalProperties,IDriver driver)
+        private readonly IChromeWebDriver _ichromeWebDriver;
+        private readonly IFirefoxWebDriver _ifirefoxWebDriver;
+        private readonly IObjectContainer _iobjectContainer;
+        private readonly IGlobalProperties _iglobalProperties;
+        private IWebDriver _iwebDriver;
+
+        public Driver(IChromeWebDriver ichromeWebDriver, IFirefoxWebDriver ifirefoxWebDriver, IObjectContainer iobjectContainer, IGlobalProperties iglobalProperties)
         {
             _ichromeWebDriver = ichromeWebDriver;
             _ifirefoxWebDriver = ifirefoxWebDriver;
             _iobjectContainer = iobjectContainer;
             _iglobalProperties = iglobalProperties;
-            _iwebDriver=driver.GetWebDriver();
         }
 
         public IWebDriver GetWebDriver()
@@ -40,7 +40,6 @@ namespace Automation.Framework.Core.WebUI.DriverContext
 
         public void GetNewWebDriver()
         {
-           
             switch (_iglobalProperties.browsertype.ToLower())
             {
                 case "chrome":
@@ -55,6 +54,10 @@ namespace Automation.Framework.Core.WebUI.DriverContext
             }
         }
 
+        public void CloseBrowser()
+        {
+            _iwebDriver?.Close();
+        }
         public int FindElementsCount(IAtBy iatBy)
         {
             return GetWebDriver().FindElements(iatBy.By).Count;
@@ -65,10 +68,7 @@ namespace Automation.Framework.Core.WebUI.DriverContext
             iatWebElement.Set(GetWebDriver(), iatBy, _iobjectContainer);
             return iatWebElement;
         }
-        public void CloseBrowser()
-        {
-            _iwebDriver.Close();
-        }
+
 
         public void NavigateTo(string url)
         {

@@ -18,57 +18,34 @@ namespace Automation.DemoUI.Hooks
     public class SpecflowBase
     {
 
-        IGlobalProperties _iglobalProperties;  
-        ScenarioContext _scenarioContext;
-        IDriver _idrivers;
-        IWebDriver _driver;
-        IExtentReport extentReport;
-        IExtentFeatureReport _iextentFeatureReport;
-        public SpecflowBase(IDriver idrivers)
+        private readonly IDriver _idrivers;
+        private readonly IGlobalProperties _iglobalProperties;
+        private readonly ScenarioContext _scenarioContext;
+        private readonly IExtentFeatureReport _iextentFeatureReport;
+        private readonly IExtentReport _extentReport;
+
+        public SpecflowBase(IDriver idrivers, IGlobalProperties iglobalProperties, ScenarioContext scenarioContext, IExtentFeatureReport iextentFeatureReport, IExtentReport extentReport)
         {
             _idrivers = idrivers;
-
+            _iglobalProperties = iglobalProperties;
+            _scenarioContext = scenarioContext;
+            _iextentFeatureReport = iextentFeatureReport;
+            _extentReport = extentReport;
         }
 
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
             DBUtils.CreateConnection();
-            DBUtils.SslContext();          
+            DBUtils.SslContext();
         }
 
         [BeforeScenario(Order = 2)]
-        public void BeforeScenario(ScenarioContext scenarioContext, FeatureContext fs, IGlobalProperties iglobalProperties,IExtentFeatureReport iextentFeatureReport, IExtentReport _extentReport)
+        public void BeforeScenario(FeatureContext featureContext)
         {
-            _scenarioContext = scenarioContext;
-            extentReport = _extentReport;
-            extentReport.CreateFeature(fs.FeatureInfo.Title);
-            fs["iextentreport"] = extentReport;
-            extentReport.CreateScenario(scenarioContext.ScenarioInfo.Title);
-            _iglobalProperties= iglobalProperties;
-            _iextentFeatureReport= iextentFeatureReport;
-        }
-
-        [AfterStep]
-        public void AfterSteps(ScenarioContext sc, FeatureContext fs)
-        {
-            IExtentReport extentReport = (IExtentReport)fs["iextentreport"];         
-            string base64 = null; 
-            if (sc.TestError != null)
-            {
-                base64 = _idrivers.GetScreenShot();
-                extentReport.Fail(sc.StepContext.StepInfo.Text, base64);
-            }
-            else
-            {
-
-                if (_iglobalProperties.stepscreenshot)
-                {
-                    base64 = _idrivers.GetScreenShot();
-                }
-                extentReport.Pass(sc.StepContext.StepInfo.Text,base64);
-            }
-
+            _extentReport.CreateFeature(featureContext.FeatureInfo.Title);
+            featureContext["iextentreport"] = _extentReport;
+            _extentReport.CreateScenario(_scenarioContext.ScenarioInfo.Title);
         }
 
         [AfterScenario]
@@ -78,16 +55,10 @@ namespace Automation.DemoUI.Hooks
             _idrivers.CloseBrowser();
         }
 
-
         [AfterTestRun]
         public static void AfterTestRun()
         {
-
             DBUtils.Destroy();
         }
-
-
-
-
     }
 }

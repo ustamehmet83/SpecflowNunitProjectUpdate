@@ -244,3 +244,325 @@
 2024-10-31 13:14:56.178 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
 2024-10-31 13:14:56.178 +03:00 [INF] ********************************************************************************
 2024-10-31 13:14:56.178 +03:00 [INF] ********************************************************************************
+2024-11-01 14:10:50.953 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:10:50.961 +03:00 [INF] ********************************************************************************
+2024-11-01 14:10:50.961 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:10:50.962 +03:00 [INF] ********************************************************************************
+2024-11-01 14:10:50.962 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:10:50.962 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:10:50.962 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:10:50.962 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:10:50.962 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:10:50.962 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:10:50.962 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:10:50.962 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:10:50.962 +03:00 [INF] ********************************************************************************
+2024-11-01 14:10:50.962 +03:00 [INF] ********************************************************************************
+2024-11-01 14:12:27.635 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:12:27.640 +03:00 [INF] ********************************************************************************
+2024-11-01 14:12:27.640 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:12:27.640 +03:00 [INF] ********************************************************************************
+2024-11-01 14:12:27.640 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:12:27.640 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:12:27.640 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:12:27.640 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:12:27.640 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:12:27.640 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:12:27.640 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:12:27.640 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:12:27.640 +03:00 [INF] ********************************************************************************
+2024-11-01 14:12:27.640 +03:00 [INF] ********************************************************************************
+2024-11-01 14:15:35.739 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:15:35.745 +03:00 [INF] ********************************************************************************
+2024-11-01 14:15:35.745 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:15:35.745 +03:00 [INF] ********************************************************************************
+2024-11-01 14:15:35.745 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:15:35.745 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:15:35.745 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:15:35.745 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:15:35.745 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:15:35.745 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:15:35.745 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:15:35.745 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:15:35.745 +03:00 [INF] ********************************************************************************
+2024-11-01 14:15:35.745 +03:00 [INF] ********************************************************************************
+2024-11-01 14:15:35.798 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:15:35.798 +03:00 [INF] ********************************************************************************
+2024-11-01 14:15:35.798 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:15:35.798 +03:00 [INF] ********************************************************************************
+2024-11-01 14:15:35.798 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:15:35.798 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:15:35.798 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:15:35.798 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:15:35.798 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:15:35.798 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:15:35.798 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:15:35.798 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:15:35.798 +03:00 [INF] ********************************************************************************
+2024-11-01 14:15:35.798 +03:00 [INF] ********************************************************************************
+2024-11-01 14:25:32.951 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:25:32.956 +03:00 [INF] ********************************************************************************
+2024-11-01 14:25:32.956 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:25:32.957 +03:00 [INF] ********************************************************************************
+2024-11-01 14:25:32.957 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:25:32.957 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:25:32.957 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:25:32.957 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:25:32.957 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:25:32.957 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:25:32.957 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:25:32.957 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:25:32.957 +03:00 [INF] ********************************************************************************
+2024-11-01 14:25:32.957 +03:00 [INF] ********************************************************************************
+2024-11-01 14:31:45.482 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:31:45.492 +03:00 [INF] ********************************************************************************
+2024-11-01 14:31:45.492 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:31:45.492 +03:00 [INF] ********************************************************************************
+2024-11-01 14:31:45.492 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:31:45.492 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:31:45.492 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:31:45.492 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:31:45.492 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:31:45.492 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:31:45.492 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:31:45.492 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:31:45.492 +03:00 [INF] ********************************************************************************
+2024-11-01 14:31:45.492 +03:00 [INF] ********************************************************************************
+2024-11-01 14:34:28.763 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:34:28.770 +03:00 [INF] ********************************************************************************
+2024-11-01 14:34:28.770 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:34:28.770 +03:00 [INF] ********************************************************************************
+2024-11-01 14:34:28.770 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:34:28.770 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:34:28.770 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:34:28.770 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:34:28.770 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:34:28.770 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:34:28.770 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:34:28.770 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:34:28.770 +03:00 [INF] ********************************************************************************
+2024-11-01 14:34:28.770 +03:00 [INF] ********************************************************************************
+2024-11-01 14:37:21.213 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:37:21.217 +03:00 [INF] ********************************************************************************
+2024-11-01 14:37:21.218 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:37:21.218 +03:00 [INF] ********************************************************************************
+2024-11-01 14:37:21.218 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:37:21.218 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:37:21.218 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:37:21.218 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:37:21.218 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:37:21.218 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:37:21.218 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:37:21.218 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:37:21.218 +03:00 [INF] ********************************************************************************
+2024-11-01 14:37:21.218 +03:00 [INF] ********************************************************************************
+2024-11-01 14:39:49.326 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:39:49.330 +03:00 [INF] ********************************************************************************
+2024-11-01 14:39:49.330 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:39:49.330 +03:00 [INF] ********************************************************************************
+2024-11-01 14:39:49.330 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:39:49.330 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:39:49.330 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:39:49.330 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:39:49.330 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:39:49.330 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:39:49.330 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:39:49.330 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:39:49.331 +03:00 [INF] ********************************************************************************
+2024-11-01 14:39:49.331 +03:00 [INF] ********************************************************************************
+2024-11-01 14:42:50.110 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:42:50.115 +03:00 [INF] ********************************************************************************
+2024-11-01 14:42:50.115 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:42:50.115 +03:00 [INF] ********************************************************************************
+2024-11-01 14:42:50.115 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:42:50.115 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:42:50.115 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:42:50.115 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:42:50.115 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:42:50.115 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:42:50.115 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:42:50.115 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:42:50.115 +03:00 [INF] ********************************************************************************
+2024-11-01 14:42:50.115 +03:00 [INF] ********************************************************************************
+2024-11-01 14:43:07.019 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:43:07.023 +03:00 [INF] ********************************************************************************
+2024-11-01 14:43:07.023 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:43:07.023 +03:00 [INF] ********************************************************************************
+2024-11-01 14:43:07.023 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:43:07.023 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:43:07.023 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:43:07.023 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:43:07.023 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:43:07.024 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:43:07.024 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:43:07.024 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:43:07.024 +03:00 [INF] ********************************************************************************
+2024-11-01 14:43:07.024 +03:00 [INF] ********************************************************************************
+2024-11-01 14:46:28.070 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:46:28.077 +03:00 [INF] ********************************************************************************
+2024-11-01 14:46:28.077 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:46:28.077 +03:00 [INF] ********************************************************************************
+2024-11-01 14:46:28.077 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:46:28.077 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:46:28.077 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:46:28.077 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:46:28.077 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:46:28.077 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:46:28.077 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:46:28.077 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:46:28.077 +03:00 [INF] ********************************************************************************
+2024-11-01 14:46:28.077 +03:00 [INF] ********************************************************************************
+2024-11-01 14:46:50.881 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:46:50.890 +03:00 [INF] ********************************************************************************
+2024-11-01 14:46:50.890 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:46:50.890 +03:00 [INF] ********************************************************************************
+2024-11-01 14:46:50.890 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:46:50.890 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:46:50.890 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:46:50.890 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:46:50.890 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:46:50.890 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:46:50.890 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:46:50.890 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:46:50.890 +03:00 [INF] ********************************************************************************
+2024-11-01 14:46:50.890 +03:00 [INF] ********************************************************************************
+2024-11-01 14:50:21.389 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:50:21.394 +03:00 [INF] ********************************************************************************
+2024-11-01 14:50:21.394 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:50:21.394 +03:00 [INF] ********************************************************************************
+2024-11-01 14:50:21.394 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:50:21.394 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:50:21.394 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:50:21.394 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:50:21.394 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:50:21.394 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:50:21.394 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:50:21.394 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:50:21.394 +03:00 [INF] ********************************************************************************
+2024-11-01 14:50:21.394 +03:00 [INF] ********************************************************************************
+2024-11-01 14:51:34.446 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:51:34.451 +03:00 [INF] ********************************************************************************
+2024-11-01 14:51:34.451 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:51:34.451 +03:00 [INF] ********************************************************************************
+2024-11-01 14:51:34.451 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:51:34.452 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:51:34.452 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:51:34.452 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:51:34.452 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:51:34.452 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:51:34.452 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:51:34.452 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:51:34.452 +03:00 [INF] ********************************************************************************
+2024-11-01 14:51:34.452 +03:00 [INF] ********************************************************************************
+2024-11-01 14:53:12.904 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:53:12.908 +03:00 [INF] ********************************************************************************
+2024-11-01 14:53:12.908 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:53:12.908 +03:00 [INF] ********************************************************************************
+2024-11-01 14:53:12.908 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:53:12.908 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:53:12.908 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:53:12.908 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:53:12.909 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:53:12.909 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:53:12.909 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:53:12.909 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:53:12.909 +03:00 [INF] ********************************************************************************
+2024-11-01 14:53:12.909 +03:00 [INF] ********************************************************************************
+2024-11-01 14:53:52.276 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:53:52.281 +03:00 [INF] ********************************************************************************
+2024-11-01 14:53:52.281 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:53:52.281 +03:00 [INF] ********************************************************************************
+2024-11-01 14:53:52.281 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:53:52.281 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:53:52.281 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:53:52.281 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:53:52.281 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:53:52.281 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:53:52.281 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:53:52.281 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:53:52.281 +03:00 [INF] ********************************************************************************
+2024-11-01 14:53:52.281 +03:00 [INF] ********************************************************************************
+2024-11-01 14:54:54.635 +03:00 [DBG] ********************************************************************************
+2024-11-01 14:54:54.635 +03:00 [INF] ********************************************************************************
+2024-11-01 14:54:54.635 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 14:54:54.635 +03:00 [INF] ********************************************************************************
+2024-11-01 14:54:54.635 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 14:54:54.635 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 14:54:54.635 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 14:54:54.635 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 14:54:54.635 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 14:54:54.635 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 14:54:54.635 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:54:54.635 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 14:54:54.635 +03:00 [INF] ********************************************************************************
+2024-11-01 14:54:54.635 +03:00 [INF] ********************************************************************************
+2024-11-01 15:05:49.126 +03:00 [DBG] ********************************************************************************
+2024-11-01 15:05:49.132 +03:00 [INF] ********************************************************************************
+2024-11-01 15:05:49.132 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 15:05:49.132 +03:00 [INF] ********************************************************************************
+2024-11-01 15:05:49.132 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 15:05:49.132 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 15:05:49.132 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 15:05:49.132 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 15:05:49.132 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 15:05:49.132 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 15:05:49.132 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 15:05:49.132 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 15:05:49.132 +03:00 [INF] ********************************************************************************
+2024-11-01 15:05:49.132 +03:00 [INF] ********************************************************************************
+2024-11-01 15:06:15.024 +03:00 [DBG] ********************************************************************************
+2024-11-01 15:06:15.029 +03:00 [INF] ********************************************************************************
+2024-11-01 15:06:15.029 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 15:06:15.029 +03:00 [INF] ********************************************************************************
+2024-11-01 15:06:15.029 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 15:06:15.029 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 15:06:15.029 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 15:06:15.029 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 15:06:15.029 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 15:06:15.029 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 15:06:15.029 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 15:06:15.029 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 15:06:15.029 +03:00 [INF] ********************************************************************************
+2024-11-01 15:06:15.029 +03:00 [INF] ********************************************************************************
+2024-11-01 15:07:03.953 +03:00 [DBG] ********************************************************************************
+2024-11-01 15:07:03.959 +03:00 [INF] ********************************************************************************
+2024-11-01 15:07:03.960 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 15:07:03.960 +03:00 [INF] ********************************************************************************
+2024-11-01 15:07:03.960 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 15:07:03.960 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 15:07:03.960 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 15:07:03.960 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 15:07:03.960 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 15:07:03.960 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 15:07:03.960 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 15:07:03.960 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 15:07:03.960 +03:00 [INF] ********************************************************************************
+2024-11-01 15:07:03.960 +03:00 [INF] ********************************************************************************
+2024-11-01 15:07:34.028 +03:00 [DBG] ********************************************************************************
+2024-11-01 15:07:34.035 +03:00 [INF] ********************************************************************************
+2024-11-01 15:07:34.035 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 15:07:34.035 +03:00 [INF] ********************************************************************************
+2024-11-01 15:07:34.035 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 15:07:34.035 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 15:07:34.035 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 15:07:34.035 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 15:07:34.035 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 15:07:34.035 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 15:07:34.035 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 15:07:34.035 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 15:07:34.035 +03:00 [INF] ********************************************************************************
+2024-11-01 15:07:34.035 +03:00 [INF] ********************************************************************************
+2024-11-01 15:08:23.743 +03:00 [DBG] ********************************************************************************
+2024-11-01 15:08:23.749 +03:00 [INF] ********************************************************************************
+2024-11-01 15:08:23.749 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-01 15:08:23.749 +03:00 [INF] ********************************************************************************
+2024-11-01 15:08:23.749 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-01 15:08:23.749 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-01 15:08:23.749 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-01 15:08:23.749 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-01 15:08:23.749 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-01 15:08:23.749 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-01 15:08:23.749 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 15:08:23.749 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
+2024-11-01 15:08:23.749 +03:00 [INF] ********************************************************************************
+2024-11-01 15:08:23.749 +03:00 [INF] ********************************************************************************

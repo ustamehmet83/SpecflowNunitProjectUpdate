@@ -110,7 +110,7 @@ namespace Automation.DemoUI.TestCases
     testRunner.When("admin SOEID Yi girer passwordu girer ve login butonuna basar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
-    testRunner.Then("admin sağ üst köşede \"usersoeid\" görmeli", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("admin sağ üst köşede \"adminsoeid\" görmeli", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -140,7 +140,7 @@ namespace Automation.DemoUI.TestCases
     testRunner.When("kullanıcı SOEID Yi girer passwordu girer ve login butonuna basar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 13
-    testRunner.Then("kullanıcı sağ üst köşede \"adminsoeid\" görmeli", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("kullanıcı sağ üst köşede \"usersoeid\" görmeli", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

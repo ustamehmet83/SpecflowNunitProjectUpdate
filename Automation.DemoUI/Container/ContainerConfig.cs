@@ -10,6 +10,7 @@ using Automation.Framework.Core.WebUI.Reports;
 using Automation.Framework.Core.WebUI.Utilities;
 using Automation.Framework.Core.WebUI.WebElements;
 using BoDi;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,8 +26,7 @@ namespace Automation.DemoUI.Container
     {
         [BeforeScenario(Order =1)]
         public void BeforeScenario(IObjectContainer iobjectContainer) 
-        {
-          
+        {    
             iobjectContainer.RegisterTypeAs<DefaultVariables, IDefaultVariables>();
             iobjectContainer.RegisterTypeAs<Logging, ILogging>();
             iobjectContainer.RegisterTypeAs<GlobalProperties, IGlobalProperties>();
@@ -45,11 +45,6 @@ namespace Automation.DemoUI.Container
             iobjectContainer.RegisterTypeAs<BasePage,BasePage>();
             iobjectContainer.RegisterTypeAs<DashBoardPage, DashBoardPage>();
             iobjectContainer.RegisterTypeAs<LoginPage, LoginPage>();
-
-
-
-
-
         }   
     }
 }

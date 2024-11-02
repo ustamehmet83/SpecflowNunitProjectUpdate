@@ -26,6 +26,7 @@ namespace Automation.Framework.Core.WebUI.Driver
             new WebDriverManager.DriverManager().SetUpDriver(new FirefoxConfig());
             webDriver = new FirefoxDriver(GetOptions());
             webDriver.Manage().Window.Maximize();
+            webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
 
             return webDriver;
         }

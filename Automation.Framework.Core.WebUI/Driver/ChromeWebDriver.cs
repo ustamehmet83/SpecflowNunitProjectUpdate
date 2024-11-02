@@ -24,6 +24,7 @@ namespace Automation.Framework.Core.WebUI.Driver
             new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
             IWebDriver iwebDriver = new ChromeDriver(GetOptions());
             iwebDriver.Manage().Window.Maximize();
+            iwebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
             return iwebDriver;
 
         }
@@ -33,6 +34,7 @@ namespace Automation.Framework.Core.WebUI.Driver
             ChromeOptions options = new ChromeOptions();
             options.AcceptInsecureCertificates = true;
             options.AddExcludedArgument("enable-automation");
+            options.AddUserProfilePreference("credentials_enable_service", false);
             options.AddArgument("disable-extensions");
             options.AddArgument("disable-infobars");
             options.AddArgument("disable-notifications");

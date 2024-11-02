@@ -8,6 +8,7 @@ Feature: Login feature
     When admin SOEID Yi girer passwordu girer ve login butonuna basar
     Then admin sağ üst köşede "adminsoeid" görmeli
 
+    
   Scenario: kullanıcı olarak giris yapalım
     When kullanıcı SOEID Yi girer passwordu girer ve login butonuna basar
     Then kullanıcı sağ üst köşede "usersoeid" görmeli

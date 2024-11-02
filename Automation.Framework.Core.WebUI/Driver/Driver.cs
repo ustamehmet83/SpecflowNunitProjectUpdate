@@ -15,6 +15,8 @@ namespace Automation.Framework.Core.WebUI.Driver
 {
     public class Driver : IDriver
     {
+        //ISpecflow output helper
+        //spec sync
         private readonly IChromeWebDriver _ichromeWebDriver;
         private readonly IFirefoxWebDriver _ifirefoxWebDriver;
         private readonly IObjectContainer _iobjectContainer;
@@ -107,7 +109,6 @@ namespace Automation.Framework.Core.WebUI.Driver
                 }
             }
         }
-
 
         public void SwitchToFrameWithName(string frameName)
         {

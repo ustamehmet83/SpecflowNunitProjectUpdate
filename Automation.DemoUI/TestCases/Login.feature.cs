@@ -123,7 +123,7 @@ namespace Automation.DemoUI.TestCases
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("kullanıcı olarak giris yapalım", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 11
+#line 12
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -136,10 +136,10 @@ namespace Automation.DemoUI.TestCases
 #line 4
   this.FeatureBackground();
 #line hidden
-#line 12
+#line 13
     testRunner.When("kullanıcı SOEID Yi girer passwordu girer ve login butonuna basar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 13
+#line 14
     testRunner.Then("kullanıcı sağ üst köşede \"usersoeid\" görmeli", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -160,7 +160,7 @@ namespace Automation.DemoUI.TestCases
             argumentsOfScenario.Add("password", password);
             argumentsOfScenario.Add("alert", alert);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("kullanıcı geçersiz bilgilerle giriş yapar", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 15
+#line 16
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -173,10 +173,10 @@ namespace Automation.DemoUI.TestCases
 #line 4
   this.FeatureBackground();
 #line hidden
-#line 16
+#line 17
     testRunner.When(string.Format("kullanıcı geçersiz \"{0}\" ve geçersiz \"{1}\" girer", sOEID, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 17
+#line 18
     testRunner.Then(string.Format("kullanıcı \"{0}\" mesajı görmeli", alert), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

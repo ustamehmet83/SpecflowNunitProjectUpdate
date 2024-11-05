@@ -27,13 +27,15 @@ namespace Automation.DemoUI.Hooks
         private readonly IExtentFeatureReport _iextentFeatureReport;
         private readonly IExtentReport _extentReport;
 
-        public SpecflowBase(IDriver idriver, IGlobalProperties iglobalProperties, ScenarioContext scenarioContext, IExtentFeatureReport iextentFeatureReport, IExtentReport extentReport)
+        public SpecflowBase(IDriver idriver, IGlobalProperties iglobalProperties, ScenarioContext scenarioContext, IExtentFeatureReport iextentFeatureReport, IExtentReport extentReport
+            )
         {
             _idriver = idriver;
             _iglobalProperties = iglobalProperties;
             _scenarioContext = scenarioContext;
             _iextentFeatureReport = iextentFeatureReport;
             _extentReport = extentReport;
+           
         }
 
         [BeforeTestRun]
@@ -43,7 +45,7 @@ namespace Automation.DemoUI.Hooks
             //DBUtils.SslContext();
         }
 
-        [BeforeScenario(Order = 2)]
+        [BeforeScenario(Order = 3)]
         public void BeforeScenario(FeatureContext featureContext)
         {
             _extentReport.CreateFeature(featureContext.FeatureInfo.Title);

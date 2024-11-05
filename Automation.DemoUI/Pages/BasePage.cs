@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Automation.DemoUI.Pages
 {
-    public class BasePage : BrowserUtils
+    public abstract class BasePage : BrowserUtils
     {       
         public BasePage(IDriver driver) : base(driver)
         {

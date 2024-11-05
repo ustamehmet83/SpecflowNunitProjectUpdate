@@ -11,8 +11,10 @@ using Automation.Framework.Core.WebUI.Utilities;
 using Automation.Framework.Core.WebUI.WebElements;
 using BoDi;
 using Microsoft.Extensions.DependencyInjection;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,11 +42,11 @@ namespace Automation.DemoUI.Container
             iobjectContainer.RegisterTypeAs<AtWebElement, IAtWebElement>();
             iobjectContainer.RegisterTypeAs<ConfigurationReader, IConfigurationReader>();
             iobjectContainer.RegisterTypeAs<BrowserUtils, BrowserUtils>();
-            iobjectContainer.RegisterTypeAs<LoginPageSwag, ILoginSwagPage>();
-            iobjectContainer.RegisterTypeAs<SwagLabPage, ISwagLabPage>();
-            iobjectContainer.RegisterTypeAs<BasePage,BasePage>();
-            iobjectContainer.RegisterTypeAs<DashBoardPage, DashBoardPage>();
-            iobjectContainer.RegisterTypeAs<LoginPage, LoginPage>();
+            var driver = iobjectContainer.Resolve<IDriver>();
+            iobjectContainer.RegisterInstanceAs(driver.GetWebDriver());
+            iobjectContainer.RegisterTypes(iobjectContainer.Resolve<IDriver>());
+
+        
         }   
     }
 }

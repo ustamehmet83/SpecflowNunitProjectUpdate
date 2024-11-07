@@ -1,12 +1,7 @@
 ﻿using Automation.Framework.Core.WebUI.Abstractions;
-using Microsoft.Extensions.DependencyInjection;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
 namespace Automation.Framework.Core.WebUI.Driver
@@ -21,7 +16,7 @@ namespace Automation.Framework.Core.WebUI.Driver
 
         public IWebDriver GetChromeWebDriver()
         {
-            new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
+            new DriverManager().SetUpDriver(new ChromeConfig());
             IWebDriver iwebDriver = new ChromeDriver(GetOptions());
             iwebDriver.Manage().Window.Maximize();
             iwebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);

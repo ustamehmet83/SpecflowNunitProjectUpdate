@@ -15,7 +15,7 @@ using Automation.Framework.Core.WebUI.Driver;
 
 namespace Automation.DemoUI.Pages
 {
-    public class LoginPageSwag:TestBase,ILoginSwagPage
+    public class LoginPageSwag:TestBase
     {
 
       

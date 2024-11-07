@@ -1,4 +1,4 @@
-﻿using Automation.DemoUi.WebAbstraction;
+﻿using Automation.DemoUi.Pages;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,8 +12,8 @@ namespace Automation.DemoUi.Steps
     [Binding]
     public class SwagLabSteps
     {
-        ISwagLabPage _iswagLabPage;
-        public SwagLabSteps(ISwagLabPage iswagLabPage)
+        SwagLabPage _iswagLabPage;
+        public SwagLabSteps(SwagLabPage iswagLabPage)
         {
             _iswagLabPage = iswagLabPage;
         }

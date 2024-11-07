@@ -1,13 +1,8 @@
 ﻿using Automation.Framework.Core.WebUI.Abstractions;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WebDriverManager.DriverConfigs.Impl;
-using Microsoft.Extensions.DependencyInjection;
+using WebDriverManager;
 
 namespace Automation.Framework.Core.WebUI.Driver
 {
@@ -23,7 +18,7 @@ namespace Automation.Framework.Core.WebUI.Driver
         {
             IWebDriver webDriver;
 
-            new WebDriverManager.DriverManager().SetUpDriver(new FirefoxConfig());
+            new DriverManager().SetUpDriver(new FirefoxConfig());
             webDriver = new FirefoxDriver(GetOptions());
             webDriver.Manage().Window.Maximize();
             webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);

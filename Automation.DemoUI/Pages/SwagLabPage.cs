@@ -1,5 +1,4 @@
 ﻿using Automation.DemoUi.DataTables;
-using Automation.DemoUi.WebAbstraction;
 using Automation.DemoUI.WebAbstraction;
 using Automation.Framework.Core.WebUI.Abstractions;
 using Automation.Framework.Core.WebUI.Base;
@@ -10,7 +9,7 @@ using TechTalk.SpecFlow.Assist;
 
 namespace Automation.DemoUi.Pages
 {
-    public class SwagLabPage : TestBase, ISwagLabPage
+    public class SwagLabPage : TestBase
     {
         IConfigurationReader _iatConfiguration;
         IDriver _idriver;

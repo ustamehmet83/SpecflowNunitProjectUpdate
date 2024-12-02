@@ -2,6 +2,7 @@
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -11,20 +12,23 @@ namespace Automation.Framework.Core.WebUI.Utilities
 {
     public class DBUtils
     {
-        private static SqlConnection connection;
-        private static SqlCommand command;
-        private static SqlDataReader reader;
+        private static SqlConnection? connection;
+        private static SqlCommand? command;
+        private static SqlDataReader? reader;
 
         public static void CreateConnection()
         {
             string dbUrl = ConfigurationReader.GetJsonConfigurationValue("dbUrl");
-            string dbUsername = "sa";
-            string dbPassword = "fCK2uTCJxC";
+            
 
             try
             {
                 connection = new SqlConnection(dbUrl);
-                connection.Open();
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+
             }
             catch (SqlException e)
             {
@@ -38,7 +42,11 @@ namespace Automation.Framework.Core.WebUI.Utilities
             {
                 reader?.Close();
                 command?.Dispose();
-                connection?.Close();
+                if (connection?.State == ConnectionState.Open)
+                {
+                     connection?.Close();
+                }
+               
             }
             catch (SqlException e)
             {
@@ -51,7 +59,7 @@ namespace Automation.Framework.Core.WebUI.Utilities
             try
             {
                 command = new SqlCommand(query, connection);
-                reader = command.ExecuteReader();
+                reader = command.ExecuteReader();//CommandBehavior.CloseConnection
             }
             catch (SqlException e)
             {
@@ -59,10 +67,7 @@ namespace Automation.Framework.Core.WebUI.Utilities
             }
         }
 
-        public static object GetCellValue(string query)
-        {
-            return GetQueryResultList(query).FirstOrDefault()?.FirstOrDefault();
-        }
+        public static object GetCellValue(string query) => GetQueryResultList(query).FirstOrDefault();
 
         public static List<object> GetRowList(string query)
         {
@@ -191,6 +196,6 @@ namespace Automation.Framework.Core.WebUI.Utilities
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             ServicePointManager.ServerCertificateValidationCallback =
                 (sender, cert, chain, sslPolicyErrors) => true;
-        }     
+        }
     }
 }

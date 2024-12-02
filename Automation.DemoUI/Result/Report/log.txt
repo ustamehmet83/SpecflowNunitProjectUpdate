@@ -860,3 +860,59 @@
 2024-11-02 13:02:08.824 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\Musta\Source\Repos\SpecflowNunitProject\Automation.DemoUI\DataSetLocation
 2024-11-02 13:02:08.824 +03:00 [INF] ********************************************************************************
 2024-11-02 13:02:08.824 +03:00 [INF] ********************************************************************************
+2024-11-02 14:45:15.926 +03:00 [DBG] ********************************************************************************
+2024-11-02 14:45:15.932 +03:00 [INF] ********************************************************************************
+2024-11-02 14:45:15.932 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-02 14:45:15.932 +03:00 [INF] ********************************************************************************
+2024-11-02 14:45:15.932 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-02 14:45:15.932 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-02 14:45:15.932 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-02 14:45:15.932 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-02 14:45:15.932 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-02 14:45:15.932 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-02 14:45:15.932 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\mehme\source\repos\SpecflowNunitProjectUpdate\Automation.DemoUI\DataSetLocation
+2024-11-02 14:45:15.932 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\mehme\source\repos\SpecflowNunitProjectUpdate\Automation.DemoUI\DataSetLocation
+2024-11-02 14:45:15.932 +03:00 [INF] ********************************************************************************
+2024-11-02 14:45:15.932 +03:00 [INF] ********************************************************************************
+2024-11-02 14:49:19.919 +03:00 [DBG] ********************************************************************************
+2024-11-02 14:49:19.927 +03:00 [INF] ********************************************************************************
+2024-11-02 14:49:19.927 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-02 14:49:19.927 +03:00 [INF] ********************************************************************************
+2024-11-02 14:49:19.927 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-02 14:49:19.927 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-02 14:49:19.927 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-02 14:49:19.927 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-02 14:49:19.927 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-02 14:49:19.927 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-02 14:49:19.927 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\mehme\source\repos\SpecflowNunitProjectUpdate\Automation.DemoUI\DataSetLocation
+2024-11-02 14:49:19.927 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\mehme\source\repos\SpecflowNunitProjectUpdate\Automation.DemoUI\DataSetLocation
+2024-11-02 14:49:19.927 +03:00 [INF] ********************************************************************************
+2024-11-02 14:49:19.927 +03:00 [INF] ********************************************************************************
+2024-11-24 14:00:41.717 +03:00 [DBG] ********************************************************************************
+2024-11-24 14:00:41.726 +03:00 [INF] ********************************************************************************
+2024-11-24 14:00:41.726 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-24 14:00:41.726 +03:00 [INF] ********************************************************************************
+2024-11-24 14:00:41.726 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-24 14:00:41.726 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-24 14:00:41.726 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-24 14:00:41.726 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-24 14:00:41.726 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-24 14:00:41.726 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-24 14:00:41.726 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\mehme\source\repos\SpecflowNunitProjectUpdate\Automation.DemoUI\DataSetLocation
+2024-11-24 14:00:41.726 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\mehme\source\repos\SpecflowNunitProjectUpdate\Automation.DemoUI\DataSetLocation
+2024-11-24 14:00:41.726 +03:00 [INF] ********************************************************************************
+2024-11-24 14:00:41.726 +03:00 [INF] ********************************************************************************
+2024-11-24 14:02:11.493 +03:00 [DBG] ********************************************************************************
+2024-11-24 14:02:11.501 +03:00 [INF] ********************************************************************************
+2024-11-24 14:02:11.501 +03:00 [INF] Configuration |RUN PARAMETERS
+2024-11-24 14:02:11.501 +03:00 [INF] ********************************************************************************
+2024-11-24 14:02:11.501 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2024-11-24 14:02:11.501 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2024-11-24 14:02:11.501 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2024-11-24 14:02:11.501 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2024-11-24 14:02:11.501 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2024-11-24 14:02:11.501 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2024-11-24 14:02:11.501 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\mehme\source\repos\SpecflowNunitProjectUpdate\Automation.DemoUI\DataSetLocation
+2024-11-24 14:02:11.501 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\mehme\source\repos\SpecflowNunitProjectUpdate\Automation.DemoUI\DataSetLocation
+2024-11-24 14:02:11.501 +03:00 [INF] ********************************************************************************
+2024-11-24 14:02:11.501 +03:00 [INF] ********************************************************************************

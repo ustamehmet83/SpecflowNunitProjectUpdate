@@ -21,7 +21,8 @@ namespace Automation.Framework.Core.WebUI.Driver
         private readonly IFirefoxWebDriver _ifirefoxWebDriver;
         private readonly IObjectContainer _iobjectContainer;
         private readonly IGlobalProperties _iglobalProperties;
-        private IWebDriver _iwebDriver;
+        private ThreadLocal<IWebDriver> driverPool = new ThreadLocal<IWebDriver>();
+        //private IWebDriver _iwebDriver;
 
         public Driver(IChromeWebDriver ichromeWebDriver, IFirefoxWebDriver ifirefoxWebDriver, IObjectContainer iobjectContainer, IGlobalProperties iglobalProperties)
         {
@@ -33,11 +34,11 @@ namespace Automation.Framework.Core.WebUI.Driver
 
         public IWebDriver GetWebDriver()
         {
-            if (_iwebDriver == null)
+            if (driverPool.Value == null)
             {
                 GetNewWebDriver();
             }
-            return _iwebDriver;
+            return driverPool.Value;
         }
 
         public void GetNewWebDriver()
@@ -45,20 +46,20 @@ namespace Automation.Framework.Core.WebUI.Driver
             switch (_iglobalProperties.browsertype.ToLower())
             {
                 case "chrome":
-                    _iwebDriver = _ichromeWebDriver.GetChromeWebDriver();
+                    driverPool.Value = _ichromeWebDriver.GetChromeWebDriver();
                     break;
                 case "firefox":
-                    _iwebDriver = _ifirefoxWebDriver.GetFirefoxDriver();
+                    driverPool.Value = _ifirefoxWebDriver.GetFirefoxDriver();
                     break;
                 default:
-                    _iwebDriver = _ichromeWebDriver.GetChromeWebDriver();
+                    driverPool.Value = _ichromeWebDriver.GetChromeWebDriver();
                     break;
             }
         }
 
         public void CloseBrowser()
         {
-            _iwebDriver?.Close();
+            driverPool.Value?.Close();
         }
         public int FindElementsCount(IAtBy iatBy)
         {

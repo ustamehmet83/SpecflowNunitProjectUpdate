@@ -157,11 +157,5 @@ namespace Automation.Framework.Core.WebUI.Utilities
                 }
             };
         }
-
-
-
-
-
-
     }
 }

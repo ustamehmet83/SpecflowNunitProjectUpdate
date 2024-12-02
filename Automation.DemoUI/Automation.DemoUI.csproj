@@ -9,8 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <SpecFlowObsoleteCodeBehindFiles Remove="TestCases\Login.feature.cs" />
-    <SpecFlowObsoleteCodeBehindFiles Remove="TestCases\SwagLabs.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Login.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\SwagLabs.feature.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,10 +33,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="TestCases\LoginSwag.feature.cs">
+    <Compile Update="Features\LoginSwag.feature.cs">
       <DependentUpon>LoginSwag.feature</DependentUpon>
     </Compile>
-    <Compile Update="TestCases\SwagLabs.feature.cs">
+    <Compile Update="Features\SwagLabs.feature.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -48,11 +48,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <SpecFlowFeatureFiles Update="TestCases\LoginSwag.feature">
+    <SpecFlowFeatureFiles Update="Features\LoginSwag.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="TestCases\SwagLabs.feature">
+    <SpecFlowFeatureFiles Update="Features\SwagLabs.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>

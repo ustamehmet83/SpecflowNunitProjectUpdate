@@ -1,24 +1,31 @@
-﻿@login @smoke
-Feature: Login feature
+﻿Feature: Google Cloud Pricing Calculator
 
-  Background: kullanıcı giris sayfasında olmalı
-    Given kullanıcı netrex giris sayfasında olmalı
-
-  Scenario: admin olarak giris yapalım
-    When admin SOEID Yi girer passwordu girer ve login butonuna basar
-    Then admin sağ üst köşede "adminsoeid" görmeli
+Scenario: Calculate monthly rent for Compute Engine
+	Given I navigate to "https://cloud.google.com/"
+	When I click the search button at the top of the portal page
+	And I enter "Google Cloud Platform Pricing Calculator" into the search field
+	And I click "Google Cloud Platform Pricing Calculator" in the search results
+	And I click COMPUTE ENGINE at the top of the page
+	And I fill out the form with the following data:
+		| Field                       | Value                                                                 |
+		| Number of instances         | 4                                                                     |
+		| Operating System / Software | Free: Debian, CentOS, CoreOS, Ubuntu or BYOL (Bring Your Own License) |
+		| VM Class                    | Regular                                                               |
+		| Instance type               | n1-standard-8vCPUs: 8, RAM: 30GiB                                     |
+		| Number of GPUs              | 1                                                                     |
+		| GPU type                    | NVIDIA TESLA P100                                                     |
+		| Local SSD                   | 2x375 GB                                                              |
+		| Datacenter location         | Belgium (europe-west1)                                                |
+		| Committed usage             | 1 year                                                                |
+	And I click more options
+	Then the estimated data should be correct:
+		| Field           | Expected Value                      |
+		| VM Class        | Regular                             |
+		| Instance type   | n1-standard-8, vCPUs: 8, RAM: 30 GB |
+		| Region          | Belgium (europe-west1)              |
+		| Local SSD       | 2x375 GB                            |
+		| Commitment term | 1 year                              |
+	And the monthly rent should match the manual calculation result
 
     
-  Scenario: kullanıcı olarak giris yapalım
-    When kullanıcı SOEID Yi girer passwordu girer ve login butonuna basar
-    Then kullanıcı sağ üst köşede "usersoeid" görmeli
-
-  Scenario Outline: kullanıcı geçersiz bilgilerle giriş yapar
-    When kullanıcı geçersiz "<SOEID>" ve geçersiz "<password>" girer
-    Then kullanıcı "<alert>" mesajı görmeli
-    Examples:
-      | SOEID                        | password     | alert                                 |
-      | hazal.oncel@hedefbank.com.tr |              | Error: Password Can Not Be Empty      |
-      |                              | Password123* | Error: Username Can Not Be Empty      |
-      |                              |              | Error: Username Can Not Be Empty      |
-      | ıncorrect                    | incorrect    | Error: Incorrect Username or Password |
+ 

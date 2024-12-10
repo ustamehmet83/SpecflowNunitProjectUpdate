@@ -20,17 +20,13 @@ namespace Automation.DemoUI.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Login feature")]
-    [NUnit.Framework.CategoryAttribute("login")]
-    [NUnit.Framework.CategoryAttribute("smoke")]
-    public partial class LoginFeatureFeature
+    [NUnit.Framework.DescriptionAttribute("Google Cloud Pricing Calculator")]
+    public partial class GoogleCloudPricingCalculatorFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private static string[] featureTags = new string[] {
-                "login",
-                "smoke"};
+        private static string[] featureTags = ((string[])(null));
         
 #line 1 "Login.feature"
 #line hidden
@@ -39,7 +35,7 @@ namespace Automation.DemoUI.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Login feature", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Google Cloud Pricing Calculator", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,24 +73,15 @@ namespace Automation.DemoUI.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 4
-  #line hidden
-#line 5
-    testRunner.Given("kullanıcı netrex giris sayfasında olmalı", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("admin olarak giris yapalım")]
-        public void AdminOlarakGirisYapalım()
+        [NUnit.Framework.DescriptionAttribute("Calculate monthly rent for Compute Engine")]
+        public void CalculateMonthlyRentForComputeEngine()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("admin olarak giris yapalım", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 7
-  this.ScenarioInitialize(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculate monthly rent for Compute Engine", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 3
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -104,80 +91,79 @@ namespace Automation.DemoUI.Features
             {
                 this.ScenarioStart();
 #line 4
-  this.FeatureBackground();
+ testRunner.Given("I navigate to \"https://cloud.google.com/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 5
+ testRunner.When("I click the search button at the top of the portal page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 6
+ testRunner.And("I enter \"Google Cloud Platform Pricing Calculator\" into the search field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 7
+ testRunner.And("I click \"Google Cloud Platform Pricing Calculator\" in the search results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 8
-    testRunner.When("admin SOEID Yi girer passwordu girer ve login butonuna basar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click COMPUTE ENGINE at the top of the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Field",
+                            "Value"});
+                table1.AddRow(new string[] {
+                            "Number of instances",
+                            "4"});
+                table1.AddRow(new string[] {
+                            "Operating System / Software",
+                            "Free: Debian, CentOS, CoreOS, Ubuntu or BYOL (Bring Your Own License)"});
+                table1.AddRow(new string[] {
+                            "VM Class",
+                            "Regular"});
+                table1.AddRow(new string[] {
+                            "Instance type",
+                            "n1-standard-8vCPUs: 8, RAM: 30GiB"});
+                table1.AddRow(new string[] {
+                            "Number of GPUs",
+                            "1"});
+                table1.AddRow(new string[] {
+                            "GPU type",
+                            "NVIDIA TESLA P100"});
+                table1.AddRow(new string[] {
+                            "Local SSD",
+                            "2x375 GB"});
+                table1.AddRow(new string[] {
+                            "Datacenter location",
+                            "Belgium (europe-west1)"});
+                table1.AddRow(new string[] {
+                            "Committed usage",
+                            "1 year"});
 #line 9
-    testRunner.Then("admin sağ üst köşede \"adminsoeid\" görmeli", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I fill out the form with the following data:", ((string)(null)), table1, "And ");
 #line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("kullanıcı olarak giris yapalım")]
-        public void KullanıcıOlarakGirisYapalım()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("kullanıcı olarak giris yapalım", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 12
-  this.ScenarioInitialize(scenarioInfo);
+#line 20
+ testRunner.And("I click more options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 4
-  this.FeatureBackground();
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Field",
+                            "Expected Value"});
+                table2.AddRow(new string[] {
+                            "VM Class",
+                            "Regular"});
+                table2.AddRow(new string[] {
+                            "Instance type",
+                            "n1-standard-8, vCPUs: 8, RAM: 30 GB"});
+                table2.AddRow(new string[] {
+                            "Region",
+                            "Belgium (europe-west1)"});
+                table2.AddRow(new string[] {
+                            "Local SSD",
+                            "2x375 GB"});
+                table2.AddRow(new string[] {
+                            "Commitment term",
+                            "1 year"});
+#line 21
+ testRunner.Then("the estimated data should be correct:", ((string)(null)), table2, "Then ");
 #line hidden
-#line 13
-    testRunner.When("kullanıcı SOEID Yi girer passwordu girer ve login butonuna basar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 14
-    testRunner.Then("kullanıcı sağ üst köşede \"usersoeid\" görmeli", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("kullanıcı geçersiz bilgilerle giriş yapar")]
-        [NUnit.Framework.TestCaseAttribute("hazal.oncel@hedefbank.com.tr", "", "Error: Password Can Not Be Empty", null)]
-        [NUnit.Framework.TestCaseAttribute("", "Password123*", "Error: Username Can Not Be Empty", null)]
-        [NUnit.Framework.TestCaseAttribute("", "", "Error: Username Can Not Be Empty", null)]
-        [NUnit.Framework.TestCaseAttribute("ıncorrect", "incorrect", "Error: Incorrect Username or Password", null)]
-        public void KullanıcıGecersizBilgilerleGirisYapar(string sOEID, string password, string alert, string[] exampleTags)
-        {
-            string[] tagsOfScenario = exampleTags;
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("SOEID", sOEID);
-            argumentsOfScenario.Add("password", password);
-            argumentsOfScenario.Add("alert", alert);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("kullanıcı geçersiz bilgilerle giriş yapar", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 16
-  this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 4
-  this.FeatureBackground();
-#line hidden
-#line 17
-    testRunner.When(string.Format("kullanıcı geçersiz \"{0}\" ve geçersiz \"{1}\" girer", sOEID, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 18
-    testRunner.Then(string.Format("kullanıcı \"{0}\" mesajı görmeli", alert), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 28
+ testRunner.And("the monthly rent should match the manual calculation result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -100,6 +100,13 @@ namespace Automation.Framework.Core.WebUI.Utilities
             ClickWithJS(element);
         }
 
+        public void WaitForVisibilityClickableAndClick(IWebElement element)
+        {
+            WaitForVisibility(element);
+            WaitForClickable(element);
+            element.Click();
+        }
+
         public  void WaitForInvisibility(IWebElement webElement)
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
@@ -156,6 +163,54 @@ namespace Automation.Framework.Core.WebUI.Utilities
                     return false;
                 }
             };
+        }
+
+        public IWebElement ScrollToElement(IWebElement element)
+        {            
+            var jsExecutor = (IJavaScriptExecutor)driver;
+            jsExecutor.ExecuteScript("const rect = arguments[0].getBoundingClientRect();" +
+                             "const y = rect.top + window.scrollY - (window.innerHeight / 2);" +
+                             "window.scrollTo(0, y);", element);
+            return element;
+        }
+
+        public  void WaitForStaleWebElement(IWebElement element)
+        {
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(0);  // Disable implicit wait
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+
+            wait.Until(Refreshed(ExpectedConditions.ElementToBeClickable(element)));
+        }
+
+        private static Func<IWebDriver, IWebElement> Refreshed(Func<IWebDriver, IWebElement> condition)
+        {
+            return new Func<IWebDriver, IWebElement>((driver) =>
+            {
+                bool stale = true;
+                int retries = 0;
+                IWebElement result = null;
+
+                while (stale && retries < 5)
+                {
+                    try
+                    {
+                        result = condition(driver);
+                        stale = false;
+                        Thread.Sleep(1000);  // Adding sleep for retry interval
+                    }
+                    catch (StaleElementReferenceException)
+                    {
+                        retries++;
+                    }
+                }
+
+                if (stale)
+                {
+                    throw new Exception("Element is still stale after 5 attempts.");
+                }
+
+                return result;
+            });
         }
     }
 }

@@ -1,14 +1,7 @@
 ﻿using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Bogus;
-using Automation.Framework.Core.WebUI.Utilities;
-using Automation.Framework.Core.WebUI.Abstractions;
 
 namespace Automation.DemoUI.Steps
 {
@@ -22,13 +15,7 @@ namespace Automation.DemoUI.Steps
         public static double OnsAgainstGram = 1 / 31.259768; // Adjusted value
         public static string StateMakerAdmin, TraderValue, StateMakerUser, StateMaker;
 
-        // Dates
-        //public static LocalDateTime CurrentDate;
-        //public static LocalDateTime StateDateDashboard;
-
-        // DateTime Formatter
-        //public DateTimeFormatter FormatterStateDate = new DateTimeFormatter("dd.MM.yyyy hh:mm a", CultureInfo.InvariantCulture);
-
+       
         // Selenium Actions and JavaScript Executor
         public Actions Action;
         public IJavaScriptExecutor JsExecutor;

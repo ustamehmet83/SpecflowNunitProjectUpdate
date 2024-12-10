@@ -21,7 +21,7 @@ namespace Automation.Framework.Core.WebUI.Driver
         private readonly IFirefoxWebDriver _ifirefoxWebDriver;
         private readonly IObjectContainer _iobjectContainer;
         private readonly IGlobalProperties _iglobalProperties;
-        IWebDriver driver;
+        private IWebDriver driver;
 
         public Driver(IChromeWebDriver ichromeWebDriver, IFirefoxWebDriver ifirefoxWebDriver, IObjectContainer iobjectContainer, IGlobalProperties iglobalProperties)
         {

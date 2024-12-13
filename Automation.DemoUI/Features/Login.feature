@@ -1,5 +1,6 @@
 ﻿Feature: Google Cloud Pricing Calculator
 
+
 Scenario: Calculate monthly rent for Compute Engine
 	Given I navigate to "https://cloud.google.com/"
 	When I click the search button at the top of the portal page

@@ -8,14 +8,6 @@ namespace Automation.DemoUI.Steps
     public class BaseTests 
     {
 
-        //public static ThreadLocal<SoftAssertions> SoftAssertionsThread = new ThreadLocal<SoftAssertions>();
-
-        
-        public static string AccountingEntryId;        
-        public static double OnsAgainstGram = 1 / 31.259768; // Adjusted value
-        public static string StateMakerAdmin, TraderValue, StateMakerUser, StateMaker;
-
-       
         // Selenium Actions and JavaScript Executor
         public Actions Action;
         public IJavaScriptExecutor JsExecutor;

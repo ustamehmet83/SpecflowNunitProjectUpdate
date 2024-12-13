@@ -12,13 +12,13 @@ using TechTalk.SpecFlow;
 namespace Automation.DemoUI.Steps
 {
     [Binding]
-    public class LoginTests : BaseTests
+    public class CalculatorTests : BaseTests
     {
         private readonly LoginPage _loginPage;
         private readonly CalculatorPage _calculatorPage;
         private readonly IDriver _idriver;
         ScenarioContext _scenarioContext;
-        public LoginTests(LoginPage loginPage, IDriver idriver, ScenarioContext scenarioContext, CalculatorPage calculatorPage)
+        public CalculatorTests(LoginPage loginPage, IDriver idriver, ScenarioContext scenarioContext, CalculatorPage calculatorPage)
         {
             _loginPage = loginPage;
             _idriver = idriver;
@@ -121,7 +121,7 @@ namespace Automation.DemoUI.Steps
         [Then(@"the estimated data should be correct:")]
         public void ThenTheEstimatedDataShouldBeCorrect(Table table)
         {
-
+            Thread.Sleep(1000);
             _calculatorPage.WaitForStaleWebElement(_calculatorPage.computeTotalPrice);
 
             string computeTotalPrice= _calculatorPage.computeTotalPrice.GetAttribute("textContent").Replace("$", "").Replace(",", "").Trim();

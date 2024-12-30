@@ -2,7 +2,7 @@
 using Automation.Framework.Core.WebUI.Utilities;
 
 
-namespace Automation.WebUI.Pages
+namespace Automation.Business.Pages
 {
     public abstract class BasePage : BrowserUtils
     {

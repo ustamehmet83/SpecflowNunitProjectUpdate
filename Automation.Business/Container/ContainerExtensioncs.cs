@@ -1,13 +1,13 @@
-﻿using Automation.Framework.Core.WebUI.Abstractions;
+﻿using Automation.Business.Pages;
+using Automation.Framework.Core.WebUI.Abstractions;
 using Automation.Framework.Core.WebUI.Configuration;
 using Automation.Framework.Core.WebUI.Driver;
 using Automation.Framework.Core.WebUI.Params;
 using Automation.Framework.Core.WebUI.Reports;
 using Automation.Framework.Core.WebUI.Utilities;
-using Automation.WebUI.Pages;
 using BoDi;
 
-namespace Automation.WebUI.Container;
+namespace Automation.Business.Container;
 
 
 public static class ContainerExtension

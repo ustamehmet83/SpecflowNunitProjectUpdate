@@ -1,11 +1,11 @@
+using Automation.Business.Pages;
 using Automation.Framework.Core.WebUI.Abstractions;
 using Automation.Framework.Core.WebUI.Configuration;
-using Automation.WebUI.Pages;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
-namespace Automation.WebUI.StepDefinitions
+namespace Automation.Business.StepDefinitions
 {
     [Binding]
     public class CalculatorTests : BaseTests

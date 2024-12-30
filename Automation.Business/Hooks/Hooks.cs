@@ -5,7 +5,7 @@ using System.Diagnostics;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Infrastructure;
 
-namespace Automation.WebUI.Hooks
+namespace Automation.Business.Hooks
 {
 
     [Binding]

@@ -2,7 +2,7 @@
 using BoDi;
 using TechTalk.SpecFlow;
 
-namespace Automation.WebUI.Container
+namespace Automation.Business.Container
 {
     [Binding]
     public class ContainerConfig

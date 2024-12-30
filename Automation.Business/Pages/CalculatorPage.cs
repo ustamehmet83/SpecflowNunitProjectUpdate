@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
 
-namespace Automation.WebUI.Pages
+namespace Automation.Business.Pages
 {
     public class CalculatorPage : BasePage
     {

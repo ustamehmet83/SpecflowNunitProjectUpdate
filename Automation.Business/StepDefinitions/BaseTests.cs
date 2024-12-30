@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 
-namespace Automation.WebUI.StepDefinitions
+namespace Automation.Business.StepDefinitions
 {
     public class BaseTests
     {

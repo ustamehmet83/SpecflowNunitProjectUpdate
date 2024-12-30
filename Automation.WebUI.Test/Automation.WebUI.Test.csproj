@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Automation.DemoUI\Automation.WebUI.csproj" />
+    <ProjectReference Include="..\Automation.Business\Automation.Business.csproj" />
     <ProjectReference Include="..\Automation.Framework.Core.WebUI\Automation.Framework.Core.WebUI.csproj" />
   </ItemGroup>
 

@@ -1,15 +1,11 @@
-using Automation.DemoUI.Configuration;
-using Automation.DemoUI.Pages;
 using Automation.Framework.Core.WebUI.Abstractions;
-using FluentAssertions.Equivalency;
+using Automation.Framework.Core.WebUI.Configuration;
+using Automation.WebUI.Pages;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using System;
-using System.Drawing;
-using System.Runtime.Intrinsics.X86;
 using TechTalk.SpecFlow;
 
-namespace Automation.DemoUI.Steps
+namespace Automation.WebUI.StepDefinitions
 {
     [Binding]
     public class CalculatorTests : BaseTests
@@ -29,7 +25,7 @@ namespace Automation.DemoUI.Steps
         [Given(@"I navigate to ""([^""]*)""")]
         public void GivenINavigateTo(string p0)
         {
-            String url = ConfigurationReader.GetJsonConfigurationValue("url");
+            string url = ConfigurationReader.GetJsonConfigurationValue("url");
             _idriver.GetWebDriver().Navigate().GoToUrl(url);
         }
 
@@ -124,8 +120,8 @@ namespace Automation.DemoUI.Steps
             Thread.Sleep(1000);
             _calculatorPage.WaitForStaleWebElement(_calculatorPage.computeTotalPrice);
 
-            string computeTotalPrice= _calculatorPage.computeTotalPrice.GetAttribute("textContent").Replace("$", "").Replace(",", "").Trim();
-            double computeTotalPriceDouble = Double.Parse(computeTotalPrice);
+            string computeTotalPrice = _calculatorPage.computeTotalPrice.GetAttribute("textContent").Replace("$", "").Replace(",", "").Trim();
+            double computeTotalPriceDouble = double.Parse(computeTotalPrice);
 
             _scenarioContext.Add("computeTotalPriceDouble", computeTotalPriceDouble);
             _loginPage.WaitForVisibilityClickableAndClick(_calculatorPage.viewDetailsBtn);
@@ -159,15 +155,15 @@ namespace Automation.DemoUI.Steps
         [Then(@"the monthly rent should match the manual calculation result")]
         public void ThenTheMonthlyRentShouldMatchTheManualCalculationResult()
         {
-            string machineTypePrice = _calculatorPage.instancesMachineTypePrice.GetAttribute("textContent").Replace("$", "").Replace(",", "").Trim(); 
-            string numberOfGPUPrice = _calculatorPage.instancesNumberOfGPUPrice.GetAttribute("textContent").Replace("$", "").Replace(",", "").Trim(); 
-            string localSSDPrice = _calculatorPage.instancesLocalSSDPrice.GetAttribute("textContent").Replace("$", "").Replace(",", "").Trim(); 
-            string bootDiskSizePrice = _calculatorPage.instancesBootDiskSizePrice.GetAttribute("textContent").Replace("$", "").Replace(",", "").Trim(); 
+            string machineTypePrice = _calculatorPage.instancesMachineTypePrice.GetAttribute("textContent").Replace("$", "").Replace(",", "").Trim();
+            string numberOfGPUPrice = _calculatorPage.instancesNumberOfGPUPrice.GetAttribute("textContent").Replace("$", "").Replace(",", "").Trim();
+            string localSSDPrice = _calculatorPage.instancesLocalSSDPrice.GetAttribute("textContent").Replace("$", "").Replace(",", "").Trim();
+            string bootDiskSizePrice = _calculatorPage.instancesBootDiskSizePrice.GetAttribute("textContent").Replace("$", "").Replace(",", "").Trim();
 
-            double machineTypePriceDouble = Double.Parse(machineTypePrice);
-            double numberOfGPUPriceDouble = Double.Parse(numberOfGPUPrice);
-            double localSSDPriceDouble = Double.Parse(localSSDPrice);
-            double bootDiskSizePriceDouble = Double.Parse(bootDiskSizePrice);
+            double machineTypePriceDouble = double.Parse(machineTypePrice);
+            double numberOfGPUPriceDouble = double.Parse(numberOfGPUPrice);
+            double localSSDPriceDouble = double.Parse(localSSDPrice);
+            double bootDiskSizePriceDouble = double.Parse(bootDiskSizePrice);
             double totalPrice = machineTypePriceDouble + numberOfGPUPriceDouble + localSSDPriceDouble + bootDiskSizePriceDouble;
             Assert.That(totalPrice, Is.EqualTo(_scenarioContext["computeTotalPriceDouble"]));
         }

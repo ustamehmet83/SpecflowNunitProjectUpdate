@@ -1,11 +1,9 @@
-﻿using RestSharp;
-using Newtonsoft.Json;
-
-using System.Net;
-using NUnit.Framework;
-using RestSharpDemoRider.Base;
-using System.Security.Cryptography;
+﻿using Automation.Framework.Core.WebUI.Base;
 using FluentAssertions;
+using Newtonsoft.Json;
+using NUnit.Framework;
+using RestSharp;
+using System.Net;
 
 namespace Automation.Framework.Core.WebUI.Utilities
 {

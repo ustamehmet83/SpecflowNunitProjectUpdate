@@ -1,7 +1,9 @@
 {
-  "$schema": "https://cloud.google.com",
+  "$schema": "https://specflow.org/specflow-config.json",
   "stepAssemblies": [
-    
+    {
+      "assembly": "Automation.WebUI"
+    },
     {
       "assembly": "Automation.Framework.Core.WebUI"
     }

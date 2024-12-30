@@ -1,10 +1,9 @@
 ﻿using Automation.Framework.Core.WebUI.Abstractions;
-using Automation.Framework.Core.WebUI.Driver;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
 
-namespace Automation.DemoUI.Pages
+namespace Automation.WebUI.Pages
 {
     public class CalculatorPage : BasePage
     {

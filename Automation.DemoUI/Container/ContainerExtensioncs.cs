@@ -1,14 +1,13 @@
-﻿using Automation.DemoUI.Configuration;
-using Automation.DemoUI.Pages;
-using Automation.DemoUI.WebAbstraction;
-using Automation.Framework.Core.WebUI.Abstractions;
+﻿using Automation.Framework.Core.WebUI.Abstractions;
+using Automation.Framework.Core.WebUI.Configuration;
 using Automation.Framework.Core.WebUI.Driver;
 using Automation.Framework.Core.WebUI.Params;
 using Automation.Framework.Core.WebUI.Reports;
 using Automation.Framework.Core.WebUI.Utilities;
+using Automation.WebUI.Pages;
 using BoDi;
 
-namespace Automation.DemoUI.Container;
+namespace Automation.WebUI.Container;
 
 
 public static class ContainerExtension
@@ -26,7 +25,7 @@ public static class ContainerExtension
           .Where(t => typeOfBase.IsAssignableFrom(t) && t.IsClass && !t.IsAbstract);
 
 
-        
+
         Parallel.ForEach(derivedTypes, derivedType =>
         {
             var obj = Activator.CreateInstance(derivedType, args);

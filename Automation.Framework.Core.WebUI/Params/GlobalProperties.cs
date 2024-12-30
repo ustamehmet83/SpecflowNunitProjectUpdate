@@ -1,13 +1,6 @@
 ﻿using Automation.Framework.Core.WebUI.Abstractions;
 using BoDi;
-using Gherkin.CucumberMessages.Types;
 using Microsoft.Extensions.Configuration;
-using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities.Resources;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Automation.Framework.Core.WebUI.Params
 {
@@ -25,7 +18,7 @@ namespace Automation.Framework.Core.WebUI.Params
         public string loglevel { get; set; }
         public string datasetlocation { get; set; }
         public string downloadedlocation { get; set; }
-        public GlobalProperties(IDefaultVariables idefaultVariables, ILogging ilogging, IExtentFeatureReport iextentFeatureReport,IObjectContainer iobjectContainer)
+        public GlobalProperties(IDefaultVariables idefaultVariables, ILogging ilogging, IExtentFeatureReport iextentFeatureReport, IObjectContainer iobjectContainer)
         {
             _idefaultVariables = idefaultVariables;
             _iojectContainer = iobjectContainer;
@@ -45,7 +38,7 @@ namespace Automation.Framework.Core.WebUI.Params
             catch (Exception e)
             {
                 _ilogging.Error("File does not exists. " + e.Message);
-                System.Environment.Exit(0);
+                Environment.Exit(0);
             }
 
             browsertype = string.IsNullOrEmpty(builder["BrowserType"]) ? "chrome" : builder["BrowserType"];

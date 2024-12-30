@@ -1,7 +1,6 @@
-﻿
-using RestSharp;
+﻿using RestSharp;
 
-namespace RestSharpDemoRider.Base;
+namespace Automation.Framework.Core.WebUI.Base;
 
 public interface IRestLibrary
 {

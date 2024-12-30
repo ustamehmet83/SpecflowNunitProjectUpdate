@@ -1,15 +1,14 @@
-﻿
-using Automation.Framework.Core.WebUI.Abstractions;
+﻿using Automation.Framework.Core.WebUI.Abstractions;
 using BoDi;
 using TechTalk.SpecFlow;
 
-namespace Automation.DemoUI.Container
+namespace Automation.WebUI.Container
 {
     [Binding]
     public class ContainerConfig
     {
-        [BeforeScenario(Order =1)]
-        public void BeforeScenario(IObjectContainer iobjectContainer) 
+        [BeforeScenario(Order = 1)]
+        public void BeforeScenario(IObjectContainer iobjectContainer)
         {
             iobjectContainer.RegisterCoreServices();
             iobjectContainer.RegisterWebDrivers();
@@ -17,7 +16,7 @@ namespace Automation.DemoUI.Container
             iobjectContainer.RegisterInstanceAs(driver.GetWebDriver());
             iobjectContainer.RegisterTypes(iobjectContainer.Resolve<IDriver>());
 
-        
-        }   
+
+        }
     }
 }

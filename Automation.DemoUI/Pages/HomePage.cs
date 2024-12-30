@@ -1,22 +1,17 @@
-﻿using Automation.DemoUI.WebAbstraction;
-using Automation.Framework.Core.WebUI.Abstractions;
-using Automation.Framework.Core.WebUI.Driver;
-using Automation.Framework.Core.WebUI.Utilities;
+﻿using Automation.Framework.Core.WebUI.Abstractions;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
-using System.Runtime.Intrinsics.X86;
 
-
-namespace Automation.DemoUI.Pages
+namespace Automation.WebUI.Pages
 {
     public class HomePage : BasePage
     {
 
         private IWebDriver _driver;
-      
+
         public HomePage(IDriver driver) : base(driver)
         {
-            
+
         }
 
         [FindsBy(How = How.XPath, Using = "//div[@class='YSM5S']")]
@@ -33,6 +28,6 @@ namespace Automation.DemoUI.Pages
 
         [FindsBy(How = How.XPath, Using = "//h2[.='Compute Engine']/..//p[@class='BPgnDc']")]
         public IWebElement computeEngineAddBtn;
-       
+
     }
 }

@@ -1,12 +1,7 @@
-﻿using Automation.DemoUI.Configuration;
+﻿using Automation.Framework.Core.WebUI.Configuration;
 using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Automation.Framework.Core.WebUI.Utilities
 {

@@ -1,15 +1,6 @@
-﻿
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
+﻿using OpenQA.Selenium;
 using BoDi;
 using Automation.Framework.Core.WebUI.Abstractions;
-using Automation.Framework.Core.WebUI.Params;
 
 namespace Automation.Framework.Core.WebUI.Driver
 {
@@ -65,17 +56,6 @@ namespace Automation.Framework.Core.WebUI.Driver
 
             
         }
-        public int FindElementsCount(IAtBy iatBy)
-        {
-            return GetWebDriver().FindElements(iatBy.By).Count;
-        }
-        public IAtWebElement FindElement(IAtBy iatBy)
-        {
-            IAtWebElement iatWebElement = _iobjectContainer.Resolve<IAtWebElement>();
-            iatWebElement.Set(GetWebDriver(), iatBy, _iobjectContainer);
-            return iatWebElement;
-        }
-
 
         public void NavigateTo(string url)
         {
@@ -145,10 +125,7 @@ namespace Automation.Framework.Core.WebUI.Driver
             js.ExecuteScript("window.scrollTo(0,document.body.scrollHeight)");
         }
 
-        public void ScrollIntoView(IAtWebElement iatWebElement)
-        {
-            IWebElement iwebElement = iatWebElement.GetElement();
-
+        public void ScrollIntoView(IWebElement iwebElement) { 
             IJavaScriptExecutor js = (IJavaScriptExecutor)GetWebDriver();
             js.ExecuteScript("agruments[0].scrollIntoView", iwebElement);
         }

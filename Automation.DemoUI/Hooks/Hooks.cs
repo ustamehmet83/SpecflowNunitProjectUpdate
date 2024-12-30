@@ -1,19 +1,11 @@
 ﻿using Automation.Framework.Core.WebUI.Abstractions;
-using Automation.Framework.Core.WebUI.Driver;
 using Automation.Framework.Core.WebUI.Utilities;
-using BoDi;
-using Microsoft.Extensions.DependencyInjection;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Infrastructure;
 
-namespace Automation.DemoUI.Hooks
+namespace Automation.WebUI.Hooks
 {
 
     [Binding]
@@ -35,7 +27,7 @@ namespace Automation.DemoUI.Hooks
             _scenarioContext = scenarioContext;
             _iextentFeatureReport = iextentFeatureReport;
             _extentReport = extentReport;
-           
+
         }
 
         [BeforeTestRun]
@@ -61,7 +53,7 @@ namespace Automation.DemoUI.Hooks
         {
             IExtentReport extentReport = (IExtentReport)fs["iextentreport"];
             string base64 = null;
-            
+
             if (sc.TestError != null)
             {
                 base64 = _idriver.GetScreenShot();
@@ -77,7 +69,7 @@ namespace Automation.DemoUI.Hooks
 
                 if (_iglobalProperties.stepscreenshot)
                 {
-                    base64 = _idriver.GetScreenShot();             
+                    base64 = _idriver.GetScreenShot();
                 }
                 extentReport.Pass(sc.StepContext.StepInfo.Text, base64);
             }
@@ -107,7 +99,7 @@ namespace Automation.DemoUI.Hooks
                 process.StartInfo = startInfo;
                 process.Start();
             }
-            catch (System.Exception)
+            catch (Exception)
             {
                 throw;
             }

@@ -1,17 +1,8 @@
-﻿using Microsoft.Extensions.Configuration;
-using OpenQA.Selenium.Support.UI;
+﻿using Automation.Framework.Core.WebUI.Abstractions;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Automation.Framework.Core.WebUI.Abstractions;
-using SeleniumExtras.WaitHelpers;
-using Automation.Framework.Core.WebUI.Driver;
+using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.PageObjects;
-using Automation.DemoUI.WebAbstraction;
-using AngleSharp.Dom;
+using SeleniumExtras.WaitHelpers;
 
 namespace Automation.Framework.Core.WebUI.Utilities
 {

@@ -1,9 +1,4 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Automation.Framework.Core.WebUI.Abstractions
 {
@@ -11,7 +6,6 @@ namespace Automation.Framework.Core.WebUI.Abstractions
     {
         IWebDriver GetWebDriver();
         void CloseBrowser();
-        IAtWebElement FindElement(IAtBy iatBy);
         void NavigateTo(string url);
         string GetPageTitle();
         void GetNewTab();
@@ -23,8 +17,6 @@ namespace Automation.Framework.Core.WebUI.Abstractions
         void ExecuteJavaScript(string script);
         void ScrollWithPixel();
         void ScrollByheight();
-        void ScrollIntoView(IAtWebElement iatWebElement);
         string GetScreenShot();
-        int FindElementsCount(IAtBy iatBy);
     }
 }

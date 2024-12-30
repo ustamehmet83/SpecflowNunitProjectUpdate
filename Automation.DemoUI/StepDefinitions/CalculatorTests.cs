@@ -14,11 +14,11 @@ namespace Automation.DemoUI.Steps
     [Binding]
     public class CalculatorTests : BaseTests
     {
-        private readonly LoginPage _loginPage;
+        private readonly HomePage _loginPage;
         private readonly CalculatorPage _calculatorPage;
         private readonly IDriver _idriver;
         ScenarioContext _scenarioContext;
-        public CalculatorTests(LoginPage loginPage, IDriver idriver, ScenarioContext scenarioContext, CalculatorPage calculatorPage)
+        public CalculatorTests(HomePage loginPage, IDriver idriver, ScenarioContext scenarioContext, CalculatorPage calculatorPage)
         {
             _loginPage = loginPage;
             _idriver = idriver;

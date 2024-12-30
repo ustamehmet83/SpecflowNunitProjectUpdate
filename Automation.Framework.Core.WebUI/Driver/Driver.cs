@@ -58,7 +58,12 @@ namespace Automation.Framework.Core.WebUI.Driver
 
         public void CloseBrowser()
         {
-            driver?.Close();
+            if (driver != null)
+            {
+                driver.Quit();
+            }
+
+            
         }
         public int FindElementsCount(IAtBy iatBy)
         {

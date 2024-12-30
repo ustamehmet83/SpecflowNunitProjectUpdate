@@ -9,12 +9,12 @@ using System.Runtime.Intrinsics.X86;
 
 namespace Automation.DemoUI.Pages
 {
-    public class LoginPage : BasePage
+    public class HomePage : BasePage
     {
 
         private IWebDriver _driver;
       
-        public LoginPage(IDriver driver) : base(driver)
+        public HomePage(IDriver driver) : base(driver)
         {
             
         }

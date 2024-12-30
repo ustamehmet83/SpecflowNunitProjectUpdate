@@ -6,14 +6,7 @@ using Automation.Framework.Core.WebUI.Driver;
 using Automation.Framework.Core.WebUI.Params;
 using Automation.Framework.Core.WebUI.Reports;
 using Automation.Framework.Core.WebUI.Utilities;
-using Automation.Framework.Core.WebUI.WebElements;
 using BoDi;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TechTalk.SpecFlow;
 
 namespace Automation.DemoUI.Container;
 
@@ -49,8 +42,6 @@ public static class ContainerExtension
         container.RegisterTypeAs<ExtentFeatureReport, IExtentFeatureReport>();
         container.RegisterTypeAs<ExtentReport, IExtentReport>();
         container.RegisterTypeAs<ConfigurationReader, IConfigurationReader>();
-        container.RegisterTypeAs<AtBy, IAtBy>();
-        container.RegisterTypeAs<AtWebElement, IAtWebElement>();
         container.RegisterTypeAs<BrowserUtils, BrowserUtils>();
     }
 

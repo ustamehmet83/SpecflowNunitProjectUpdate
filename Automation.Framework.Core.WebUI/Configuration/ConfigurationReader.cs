@@ -16,12 +16,14 @@ namespace Automation.Framework.Core.WebUI.Configuration
 
         public string GetConfiguration(string key)
         {
+            
             return _iconfiguration[key];
         }
 
 
         public static string GetJsonConfigurationValue(string key)
         {
+            
 
             string path = Directory
                    .GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName + "\\Resources\\applicationConfig.json";
@@ -32,6 +34,7 @@ namespace Automation.Framework.Core.WebUI.Configuration
 
         public static string GetJsonConfigurationFrameWorkValue(string key)
         {
+            
             string path = Directory
                     .GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName + "\\Resources\\frameworkSettings.json";
             var builder = new ConfigurationBuilder().AddJsonFile(path).Build();

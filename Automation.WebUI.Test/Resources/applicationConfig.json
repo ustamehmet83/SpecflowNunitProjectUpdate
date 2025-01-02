@@ -1,10 +1,10 @@
 {
   "url": "https://cloud.google.com",
-  "adminsoeid": "hazineiki@investmentbank.com",
-  "adminpassword": "Netix2024*-5=",
-  "usersoeid": "hazinebir@investmentbank.com",
-  "userpassword": "Netix2024*-5=",
+  "adminsoeid": "admin",
+  "adminpassword": "admin",
+  "usersoeid": "user",
+  "userpassword": "user",
   "guestrul": "https://www.makemytrip.com/",
-  "dbUrl": "Server=192.168.10.211;Database=NetTrexFX_Dev;User Id=sa;Password=fCK2uTCJxC;MultipleActiveResultSets=true;Timeout=300;TrustServerCertificate=True;"
+  "dbUrl": "Server=192.168.10.211;Database=Sample_Dev;User Id=sa;Password=fCK2uTCJxC;MultipleActiveResultSets=true;Timeout=300;TrustServerCertificate=True;"
 }
 

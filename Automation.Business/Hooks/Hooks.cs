@@ -94,7 +94,7 @@ namespace Automation.Business.Hooks
                 {
                     WindowStyle = ProcessWindowStyle.Hidden,
                     FileName = "cmd.exe",
-                    Arguments = string.Format(@"/C livingdoc test-assembly {0}.dll -t TestExecution.json & LivingDoc.html", "Automation.DemoUI")
+                    Arguments = string.Format(@"/C livingdoc test-assembly {0}.dll -t TestExecution.json & LivingDoc.html", "Automation.Business")
                 };
                 process.StartInfo = startInfo;
                 process.Start();

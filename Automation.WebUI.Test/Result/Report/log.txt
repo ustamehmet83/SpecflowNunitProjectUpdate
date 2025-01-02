@@ -12,3 +12,17 @@
 2025-01-02 15:42:44.342 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\mehme\source\repos\SpecflowNunitProjectUpdate\Automation.WebUI.Test\DataSetLocation
 2025-01-02 15:42:44.342 +03:00 [INF] ********************************************************************************
 2025-01-02 15:42:44.342 +03:00 [INF] ********************************************************************************
+2025-01-02 15:46:23.020 +03:00 [DBG] ********************************************************************************
+2025-01-02 15:46:23.031 +03:00 [INF] ********************************************************************************
+2025-01-02 15:46:23.031 +03:00 [INF] Configuration |RUN PARAMETERS
+2025-01-02 15:46:23.031 +03:00 [INF] ********************************************************************************
+2025-01-02 15:46:23.031 +03:00 [INF] Configuration|BROWSER TYPE: chrome
+2025-01-02 15:46:23.032 +03:00 [INF] Configuration|GRID HUB URL: https://localhost:4444/wd/hub
+2025-01-02 15:46:23.032 +03:00 [INF] Configuration|STEP SCREENSHOT: False
+2025-01-02 15:46:23.032 +03:00 [INF] Configuration|EXTENT REPORT PORTAL URL: 
+2025-01-02 15:46:23.032 +03:00 [INF] Configuration|EXTENT REPORT LOCALLY: False
+2025-01-02 15:46:23.032 +03:00 [INF] Configuration|LOG LEVEL: Debug
+2025-01-02 15:46:23.032 +03:00 [INF] Configuration|DATA SET LOCATION: C:\Users\mehme\source\repos\SpecflowNunitProjectUpdate\Automation.WebUI.Test\DataSetLocation
+2025-01-02 15:46:23.032 +03:00 [INF] Configuration|DOWNLOADED LOCATION: C:\Users\mehme\source\repos\SpecflowNunitProjectUpdate\Automation.WebUI.Test\DataSetLocation
+2025-01-02 15:46:23.032 +03:00 [INF] ********************************************************************************
+2025-01-02 15:46:23.032 +03:00 [INF] ********************************************************************************

@@ -1,5 +1,6 @@
 ﻿using Automation.Business.Pages;
 using Automation.Framework.Core.WebUI.Abstractions;
+using Automation.Framework.Core.WebUI.Base;
 using Automation.Framework.Core.WebUI.Configuration;
 using Automation.Framework.Core.WebUI.Driver;
 using Automation.Framework.Core.WebUI.Params;
@@ -42,6 +43,8 @@ public static class ContainerExtension
         container.RegisterTypeAs<ExtentReport, IExtentReport>();
         container.RegisterTypeAs<ConfigurationReader, IConfigurationReader>();
         container.RegisterTypeAs<BrowserUtils, BrowserUtils>();
+        container.RegisterTypeAs<RestBuilder, IRestBuilder>();
+        container.RegisterTypeAs<RestLibrary, IRestLibrary>();
     }
 
     public static void RegisterWebDrivers(this IObjectContainer container)

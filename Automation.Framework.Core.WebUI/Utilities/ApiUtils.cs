@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using NUnit.Framework;
 using RestSharp;
 using System.Net;
+using TechTalk.SpecFlow.CommonModels;
 
 namespace Automation.Framework.Core.WebUI.Utilities
 {
@@ -43,14 +44,26 @@ namespace Automation.Framework.Core.WebUI.Utilities
             return (IDictionary<string, object>)SendGetRequest( endpoint);
         }
 
-        private IDictionary<string, object> SendPostRequest(string module, string endpoint, IDictionary<string, object> body)
+        private async Task<IDictionary<string, object>> SendPostRequest(string endpoint, IDictionary<string, object> body)
         {
+            RestResponse? response = await _restBuilder
+                .WithRequest(endpoint)
+                .WithBody(body)
+                .WithPost();
+            if (response == null || response.Content == null)
+            {
+                throw new Exception("Response or response content is null.");
+            } 
+            
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK), $"Unexpected status code: {response.StatusCode}");
            
-            var request = _restBuilder.WithRequest(endpoint).WithBody(body);
-            var response = _restLibrary.RestClient.Execute((RestRequest)request);
-            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
-            ValidateResponse(response);
-            return JsonConvert.DeserializeObject<IDictionary<string, object>>(response.Content);
+            var result= JsonConvert.DeserializeObject<IDictionary<string, object>>(response.Content);
+
+            if (result == null)
+            {
+                throw new Exception("Failed to deserialize the response content.");
+            }
+            return result;
         }
 
         private async Task<IDictionary<string, object>> SendGetRequest(string endpoint)
@@ -59,9 +72,13 @@ namespace Automation.Framework.Core.WebUI.Utilities
             RestResponse? response = await _restBuilder              
                 .WithRequest(endpoint)
                 .WithGet();
-            response?.StatusCode.Should().Be(HttpStatusCode.OK);
+            var result = JsonConvert.DeserializeObject<IDictionary<string, object>>(response.Content);
 
-            return JsonConvert.DeserializeObject<IDictionary<string, object>>(response.Content);
+            if (result == null)
+            {
+                throw new Exception("Failed to deserialize the response content.");
+            }
+            return result;
         }
 
         private void ValidateResponse(RestResponse response)

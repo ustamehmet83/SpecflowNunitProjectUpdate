@@ -1,11 +1,7 @@
-﻿using RestSharp;
+﻿using Automation.Framework.Core.WebUI.Abstractions;
+using RestSharp;
 
 namespace Automation.Framework.Core.WebUI.Base;
-
-public interface IRestLibrary
-{
-    RestClient RestClient { get; }
-}
 
 public class RestLibrary : IRestLibrary
 {

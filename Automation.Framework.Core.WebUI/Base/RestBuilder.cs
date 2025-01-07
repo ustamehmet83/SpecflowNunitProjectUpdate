@@ -1,22 +1,9 @@
-﻿using RestSharp;
+﻿using Automation.Framework.Core.WebUI.Abstractions;
+using RestSharp;
 
 namespace Automation.Framework.Core.WebUI.Base;
 
-public interface IRestBuilder
-{
-    IRestBuilder WithRequest(string request);
-    IRestBuilder WithHeader(string name, string value);
-    IRestBuilder WithQueryParameter(string name, string value);
-    IRestBuilder WithUrlSegment(string name, string value);
-    IRestBuilder WithBody(object body);
-    Task<T?> WithGet<T>();
-    Task<T?> WithPost<T>();
-    Task<RestResponse> WithPost();
-    Task<RestResponse> WithGet();
-    Task<T?> WithPut<T>();
-    Task<T?> WithDelete<T>();
-    Task<T?> WithPatch<T>();
-}
+
 
 
 public class RestBuilder : IRestBuilder
@@ -28,8 +15,6 @@ public class RestBuilder : IRestBuilder
     {
         _restLibrary = restLibrary;
     }
-
-
 
     public IRestBuilder WithRequest(string request)
     {

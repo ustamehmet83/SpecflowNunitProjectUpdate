@@ -14,7 +14,6 @@ namespace Automation.Business.Container;
 public static class ContainerExtension
 {
     /// <summary>
-    /// BasePage'ten türeyen tüm class'ları DI'ya register eder
     /// </summary>
     /// <param name="container"></param>
 

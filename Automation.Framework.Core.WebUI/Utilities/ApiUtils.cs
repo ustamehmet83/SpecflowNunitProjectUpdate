@@ -1,4 +1,5 @@
-﻿using Automation.Framework.Core.WebUI.Base;
+﻿using Automation.Framework.Core.WebUI.Abstractions;
+using Automation.Framework.Core.WebUI.Base;
 using FluentAssertions;
 using Newtonsoft.Json;
 using NUnit.Framework;
@@ -21,17 +22,7 @@ namespace Automation.Framework.Core.WebUI.Utilities
             _restBuilder = restBuilder;
         }
 
-        public IDictionary<string, object> RequestMap(IDictionary<string, object> postRequestFutureContract, string module, string endPoint)
-        {
-            
-            return SendPostRequest(module, endPoint, postRequestFutureContract);
-        }
-
-        public IDictionary<string, object> RequestMap(string module, string endPoint)
-        {
-            return SendPostRequest(module, endPoint, null);
-        }
-
+      
         public IDictionary<string, object> RequestMapGet(string module, string endPoint)
         {
             

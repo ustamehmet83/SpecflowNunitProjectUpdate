@@ -4,7 +4,6 @@
     {
 
         string getLog { get; }
-
         string getFrameworkSettingsjson { get; }
 
         string dataSetLocation { get; }

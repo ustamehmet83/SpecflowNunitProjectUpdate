@@ -30,15 +30,6 @@ namespace Automation.Business.Hooks
 
         }
 
-        [BeforeTestRun]
-        public static void BeforeTestRun()
-        {
-            //DBUtils.CreateConnection();
-            //DBUtils.SslContext();
-        }
-
-
-
         [BeforeScenario(Order = 2)]
         public void BeforeScenario(FeatureContext featureContext)
         {
@@ -86,7 +77,6 @@ namespace Automation.Business.Hooks
         [AfterTestRun]
         public static void AfterTestRun()
         {
-            DBUtils.Destroy();
             try
             {
                 using Process process = new();
